@@ -21,28 +21,22 @@ Interface with the central log database
 
 import sys
 import Pyro4
+from . import daemons
 
-LOG_HOST = '192.168.0.102'
-LOG_PORT = 9016
-LOG_NAME = 'observatory_log_daemon'
-PYRO_COMM_TIMEOUT = 5
-
-LOG_URI = 'PYRO:' + LOG_NAME + '@' + LOG_HOST + ':' + str(LOG_PORT)
-Pyro4.config.COMMTIMEOUT = PYRO_COMM_TIMEOUT
 sys.excepthook = Pyro4.util.excepthook
 
 def info(table, message):
     """Write an info message to the given table"""
-    with Pyro4.Proxy(LOG_URI) as log:
+    with daemons.observatory_log.connect() as log:
         return log.log_info(table, message)
 
 def warning(table, message):
     """Write a warning message to the given table"""
-    with Pyro4.Proxy(LOG_URI) as log:
+    with daemons.observatory_log.connect() as log:
         return log.log_warning(table, message)
 
 def error(table, message):
     """Write an error message to the given table"""
-    with Pyro4.Proxy(LOG_URI) as log:
+    with daemons.observatory_log.connect() as log:
         return log.log_error(table, message)
 
