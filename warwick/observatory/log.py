@@ -25,18 +25,33 @@ from . import daemons
 
 sys.excepthook = Pyro4.util.excepthook
 
+# pylint: disable=broad-except
+# pylint: disable=invalid-name
+
 def info(table, message):
     """Write an info message to the given table"""
-    with daemons.observatory_log.connect() as log:
-        return log.log_info(table, message)
+    try:
+        with daemons.observatory_log.connect() as log:
+            return log.log_info(table, message)
+    except Exception as e:
+        print('Failed to log info message with exception: ' + str(e))
+        print('Original message was: (' + table + ') ' + message)
 
 def warning(table, message):
     """Write a warning message to the given table"""
-    with daemons.observatory_log.connect() as log:
-        return log.log_warning(table, message)
+    try:
+        with daemons.observatory_log.connect() as log:
+            return log.log_warning(table, message)
+    except Exception as e:
+        print('Failed to log warning message with exception: ' + str(e))
+        print('Original message was: (' + table + ') ' + message)
 
 def error(table, message):
     """Write an error message to the given table"""
-    with daemons.observatory_log.connect() as log:
-        return log.log_error(table, message)
+    try:
+        with daemons.observatory_log.connect() as log:
+            return log.log_error(table, message)
+    except Exception as e:
+        print('Failed to log error message with exception: ' + str(e))
+        print('Original message was: (' + table + ') ' + message)
 
