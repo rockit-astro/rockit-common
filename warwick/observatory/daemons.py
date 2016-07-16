@@ -40,7 +40,7 @@ class PyroDaemon(object):
         # pylint: disable=protected-access
         if timeout is None:
             proxy._pyroTimeout = self.default_timeout
-        else:
+        elif timeout > 0:
             proxy._pyroTimeout = timeout
         # pylint: enable=protected-access
 
