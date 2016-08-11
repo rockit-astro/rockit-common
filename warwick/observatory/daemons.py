@@ -68,7 +68,7 @@ onemetre_vaisala = PyroDaemon('onemetre_vaisala_daemon', '192.168.0.102', 9001, 
 onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', '192.168.0.102', 9008, 5)
 onemetre_network_ping = PyroDaemon('onemetre_netping_daemon', '192.168.0.102', 9012, 5)
 onemetre_power = PyroDaemon('onemetre_power_daemon', '192.168.0.102', 9009, 5)
-onemetre_rain = PyroDaemon('onemetre_rain_daemon', '192.168.0.102', 9016, 5)
+onemetre_rain = PyroDaemon('onemetre_rain_daemon', '192.168.0.102', 9017, 5)
 
 superwasp_log = PyroDaemon('superwasp_daemon', '192.168.0.102', 9007, 5)
 tng_log = PyroDaemon('tng_daemon', '192.168.0.102', 9011, 5)
