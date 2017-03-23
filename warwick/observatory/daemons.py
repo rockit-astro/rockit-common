@@ -84,4 +84,6 @@ onemetre_pipeline = PyroDaemon('pipeline_daemon', '192.168.0.101', 9012, 5)
 nites_roomalert = PyroDaemon('nites_roomalert_daemon', '192.168.0.81', 9008, 5)
 nites_network_ping = PyroDaemon('nites_netping_daemon', '192.168.0.81', 9012, 5)
 
+goto_roomalert = PyroDaemon('goto_roomalert_daemon', '192.168.0.103', 9020, 5)
+
 # pylint: enable=invalid-name
