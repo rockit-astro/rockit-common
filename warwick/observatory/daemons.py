@@ -59,7 +59,7 @@ class PyroDaemon(object):
         print('{} MESSAGE: Exiting daemon {}'.format(datetime.datetime.utcnow(), uri))
 
 # pylint: disable=invalid-name
-observatory_log = PyroDaemon('observatory_log_daemon', '192.168.0.102', 9016, 5)
+observatory_log = PyroDaemon('observatory_log_daemon', '192.168.0.103', 9016, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', '192.168.0.102', 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', '192.168.0.102', 9002, 5)

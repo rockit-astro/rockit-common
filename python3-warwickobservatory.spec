@@ -13,7 +13,7 @@
 # published by the Open Source Initiative.
 
 Name:           python3-warwickobservatory
-Version:        0.10
+Version:        0.11
 Release:        0
 License:        GPL3
 Summary:        Common backend code for the Warwick one-metre telescope
