@@ -60,6 +60,7 @@ class PyroDaemon(object):
 
 # pylint: disable=invalid-name
 observatory_log = PyroDaemon('observatory_log_daemon', '10.2.6.201', 9016, 5)
+observatory_network_ping = PyroDaemon('observatory_netping_daemon', '10.2.6.201', 9012, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', '10.2.6.202', 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', '10.2.6.202', 9002, 5)
