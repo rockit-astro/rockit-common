@@ -84,6 +84,7 @@ onemetre_pipeline = PyroDaemon('pipeline_daemon', '10.2.6.203', 9012, 5)
 
 nites_roomalert = PyroDaemon('nites_roomalert_daemon', '10.2.6.181', 9008, 5)
 nites_network_ping = PyroDaemon('nites_netping_daemon', '10.2.6.181', 9012, 5)
+nites_dome = PyroDaemon('nites_dome_daemon', '10.2.6.181', 9009, 5)
 
 goto_roomalert = PyroDaemon('goto_roomalert_daemon', '10.2.6.201', 9020, 5)
 goto_ups = PyroDaemon('goto_ups_daemon', '10.2.6.201', 9021, 5)
