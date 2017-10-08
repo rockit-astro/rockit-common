@@ -11,20 +11,24 @@
 # case the license is the MIT License). An "Open Source License" is a
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
-
-Name:           python3-warwickobservatory
-Version:        0.16
-Release:        1
+Name:           python34-warwick-observatory-common
+Version:        2.0
+Release:        0
 License:        GPL3
 Summary:        Common backend code for the Warwick one-metre telescope
 Url:            https://github.com/warwick-one-metre/
-Requires:       python3-Pyro4
 BuildArch:      noarch
+%if 0%{?suse_version}
+Requires:       python3, python3-Pyro4
+%endif
+%if 0%{?centos_ver}
+Requires:       python34, python34-Pyro4
+%endif
 
 %description
 Part of the observatory software for the Warwick one-meter telescope.
 
-warwick.observatory holds the common backend code shared by the other utilities.
+warwick-observatory-common holds the common backend code shared by the other utilities.
 
 %prep
 

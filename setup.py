@@ -19,7 +19,7 @@ from distutils.core import setup
 
 setup(name='warwick.observatory',
       version='0',
-      packages = ['warwick.observatory'],
+      packages = ['warwick.observatory.common'],
       author='Paul Chote',
       description='Common code for the Warwick La Palma telescopes',
       license='GNU GPLv3',
