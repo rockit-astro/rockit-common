@@ -54,4 +54,3 @@ def error(table, message):
     except Exception as e:
         print('Failed to log error message with exception: ' + str(e))
         print('Original message was: (' + table + ') ' + message)
-

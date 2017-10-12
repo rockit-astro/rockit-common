@@ -16,27 +16,22 @@
 # along with warwick.observatory.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Common helper functions
+Directory of IP addresses
 """
 
-import Pyro4
+# pylint: disable=too-few-public-methods
 
-def pyro_client_matches(ip_whitelist):
-    """Returns true if the current pyro client IP is included in the given white list"""
-    client_ip = Pyro4.current_context.client.sock.getpeername()[0]
-    return client_ip in ip_whitelist
+class IP:
+    """List of computer / device IPs"""
+    OneMetreFrontend = '10.2.6.201'
+    OneMetreDome = '10.2.6.202'
+    OneMetreTCS = '10.2.6.203'
+    OneMetreRoomAlert = '10.2.6.209'
+    OneMetreMainUPS = '10.2.6.210'
+    OneMetreDomeUPS = '10.2.6.211'
+    OneMetreRackPDU = '10.2.6.212'
+    OneMetreTelPDU = '10.2.6.213'
+    OneMetreRackNetwork = '10.2.6.212'
+    OneMetreTelNetwork = '10.2.6.213'
 
-def sexagesimal(angle):
-    """Formats a decimal number in sexagesimal format"""
-    negative = angle < 0
-    angle = abs(angle)
-
-    degrees = int(angle)
-    angle = (angle - degrees) * 60
-    minutes = int(angle)
-    seconds = (angle - minutes) * 60
-
-    if negative:
-        degrees *= -1
-
-    return '{:d}:{:02d}:{:05.2f}'.format(degrees, minutes, seconds)
+    NitesMain = '10.2.6.181'

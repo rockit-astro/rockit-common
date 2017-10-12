@@ -21,3 +21,4 @@ Common code for the Warwick 1m telescope
 
 from . import log, daemons, helpers
 from .TryLock import TryLock
+from .ip import IP

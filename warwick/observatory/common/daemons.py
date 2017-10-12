@@ -24,6 +24,8 @@ Directory of Pyro daemons
 import datetime
 import Pyro4
 
+from .ip import IP
+
 class PyroDaemon(object):
     """Encodes a reference to a remote Pyro4 daemon"""
     def __init__(self, name, host, port, default_timeout):
@@ -59,33 +61,29 @@ class PyroDaemon(object):
         print('{} MESSAGE: Exiting daemon {}'.format(datetime.datetime.utcnow(), uri))
 
 # pylint: disable=invalid-name
-observatory_log = PyroDaemon('observatory_log_daemon', '10.2.6.201', 9016, 5)
-observatory_network_ping = PyroDaemon('observatory_netping_daemon', '10.2.6.201', 9012, 5)
+observatory_log = PyroDaemon('observatory_log_daemon', IP.OneMetreFrontend, 9016, 5)
+observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.OneMetreFrontend, 9012, 5)
+superwasp_log = PyroDaemon('superwasp_daemon', IP.OneMetreFrontend, 9007, 5)
+tng_log = PyroDaemon('tng_daemon', IP.OneMetreFrontend, 9011, 5)
+goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.OneMetreFrontend, 9020, 5)
+goto_ups = PyroDaemon('goto_ups_daemon', IP.OneMetreFrontend, 9021, 5)
 
-onemetre_operations = PyroDaemon('operations_daemon', '10.2.6.202', 9015, 5)
-onemetre_environment = PyroDaemon('environment_daemon', '10.2.6.202', 9002, 5)
+onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
+onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
+onemetre_vaisala = PyroDaemon('onemetre_vaisala_daemon', IP.OneMetreDome, 9001, 5)
+onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', IP.OneMetreDome, 9008, 5)
+onemetre_network_ping = PyroDaemon('onemetre_netping_daemon', IP.OneMetreDome, 9012, 5)
+onemetre_power = PyroDaemon('onemetre_power_daemon', IP.OneMetreDome, 9009, 5)
+onemetre_rain = PyroDaemon('onemetre_rain_daemon', IP.OneMetreDome, 9017, 5)
+onemetre_dome = PyroDaemon('dome_daemon', IP.OneMetreDome, 9004, 5)
 
-onemetre_vaisala = PyroDaemon('onemetre_vaisala_daemon', '10.2.6.202', 9001, 5)
-onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', '10.2.6.202', 9008, 5)
-onemetre_network_ping = PyroDaemon('onemetre_netping_daemon', '10.2.6.202', 9012, 5)
-onemetre_power = PyroDaemon('onemetre_power_daemon', '10.2.6.202', 9009, 5)
-onemetre_rain = PyroDaemon('onemetre_rain_daemon', '10.2.6.202', 9017, 5)
+onemetre_telescope = PyroDaemon('telescope_daemon', IP.OneMetreTCS, 9003, 5)
+onemetre_tcs_diskspace = PyroDaemon('onemetre_diskspace_daemon', IP.OneMetreTCS, 9008, 5)
+onemetre_blue_camera = PyroDaemon('blue_camera_daemon', IP.OneMetreTCS, 9011, 5)
+onemetre_red_camera = PyroDaemon('red_camera_daemon', IP.OneMetreTCS, 9010, 5)
+onemetre_pipeline = PyroDaemon('pipeline_daemon', IP.OneMetreTCS, 9012, 5)
 
-superwasp_log = PyroDaemon('superwasp_daemon', '10.2.6.201', 9007, 5)
-tng_log = PyroDaemon('tng_daemon', '10.2.6.201', 9011, 5)
-
-onemetre_dome = PyroDaemon('dome_daemon', '10.2.6.202', 9004, 5)
-
-onemetre_telescope = PyroDaemon('telescope_daemon', '10.2.6.203', 9003, 5)
-onemetre_tcs_diskspace = PyroDaemon('onemetre_diskspace_daemon', '10.2.6.203', 9008, 5)
-onemetre_blue_camera = PyroDaemon('blue_camera_daemon', '10.2.6.203', 9011, 5)
-onemetre_red_camera = PyroDaemon('red_camera_daemon', '10.2.6.203', 9010, 5)
-onemetre_pipeline = PyroDaemon('pipeline_daemon', '10.2.6.203', 9012, 5)
-
-nites_roomalert = PyroDaemon('nites_roomalert_daemon', '10.2.6.181', 9008, 5)
-nites_dome = PyroDaemon('nites_dome_daemon', '10.2.6.181', 9009, 5)
-
-goto_roomalert = PyroDaemon('goto_roomalert_daemon', '10.2.6.201', 9020, 5)
-goto_ups = PyroDaemon('goto_ups_daemon', '10.2.6.201', 9021, 5)
+nites_roomalert = PyroDaemon('nites_roomalert_daemon', IP.NitesMain, 9008, 5)
+nites_dome = PyroDaemon('nites_dome_daemon', IP.NitesMain, 9009, 5)
 
 # pylint: enable=invalid-name
