@@ -35,3 +35,4 @@ class IP:
     OneMetreTelNetwork = '10.2.6.213'
 
     NitesMain = '10.2.6.181'
+    GOTOServer = '10.2.6.100'

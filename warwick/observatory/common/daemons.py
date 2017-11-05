@@ -61,12 +61,12 @@ class PyroDaemon(object):
         print('{} MESSAGE: Exiting daemon {}'.format(datetime.datetime.utcnow(), uri))
 
 # pylint: disable=invalid-name
-observatory_log = PyroDaemon('observatory_log_daemon', IP.OneMetreFrontend, 9016, 5)
-observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.OneMetreFrontend, 9012, 5)
-superwasp_log = PyroDaemon('superwasp_daemon', IP.OneMetreFrontend, 9007, 5)
-tng_log = PyroDaemon('tng_daemon', IP.OneMetreFrontend, 9011, 5)
-goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.OneMetreFrontend, 9020, 5)
-goto_ups = PyroDaemon('goto_ups_daemon', IP.OneMetreFrontend, 9021, 5)
+observatory_log = PyroDaemon('observatory_log_daemon', IP.GOTOServer, 9016, 5)
+observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.GOTOServer, 9012, 5)
+superwasp_log = PyroDaemon('superwasp_daemon', IP.GOTOServer, 9007, 5)
+tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
+goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.GOTOServer, 9020, 5)
+goto_ups = PyroDaemon('goto_ups_daemon', IP.GOTOServer, 9021, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
