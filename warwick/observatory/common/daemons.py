@@ -86,4 +86,11 @@ onemetre_pipeline = PyroDaemon('pipeline_daemon', IP.OneMetreTCS, 9012, 5)
 nites_roomalert = PyroDaemon('nites_roomalert_daemon', IP.NitesMain, 9008, 5)
 nites_dome = PyroDaemon('nites_dome_daemon', IP.NitesMain, 9009, 5)
 
+goto_gtecs_mnt = PyroDaemon('mnt', IP.GOTORackLeft, 9001, 5)
+goto_gtecs_filt = PyroDaemon('filt', IP.GOTORackLeft, 9002, 5)
+goto_gtecs_foc = PyroDaemon('foc', IP.GOTORackLeft, 9003, 5)
+goto_gtecs_cam = PyroDaemon('cam', IP.GOTORackLeft, 9004, 5)
+goto_gtecs_exq = PyroDaemon('exq', IP.GOTORackLeft, 9005, 5)
+goto_gtecs_power = PyroDaemon('power', IP.GOTORackLeft, 9006, 5)
+
 # pylint: enable=invalid-name
