@@ -12,7 +12,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 Name:           python34-warwick-observatory-common
-Version:        2.1.2
+Version:        2.1.3
 Release:        0
 License:        GPL3
 Summary:        Common backend code for the Warwick one-metre telescope

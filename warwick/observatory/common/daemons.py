@@ -92,5 +92,6 @@ goto_gtecs_foc = PyroDaemon('foc', IP.GOTORackLeft, 9003, 5)
 goto_gtecs_cam = PyroDaemon('cam', IP.GOTORackLeft, 9004, 5)
 goto_gtecs_exq = PyroDaemon('exq', IP.GOTORackLeft, 9005, 5)
 goto_gtecs_power = PyroDaemon('power', IP.GOTORackLeft, 9006, 5)
+goto_gtecs_conditions = PyroDaemon('conditions', IP.GOTORackLeft, 9031, 5)
 
 # pylint: enable=invalid-name
