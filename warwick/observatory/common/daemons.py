@@ -85,6 +85,7 @@ onemetre_pipeline = PyroDaemon('pipeline_daemon', IP.OneMetreTCS, 9012, 5)
 
 nites_roomalert = PyroDaemon('nites_roomalert_daemon', IP.NitesMain, 9008, 5)
 nites_dome = PyroDaemon('nites_dome_daemon', IP.NitesMain, 9009, 5)
+nites_environment = PyroDaemon('nites_environment', IP.NitesMain, 9010, 5)
 
 goto_gtecs_mnt = PyroDaemon('mnt', IP.GOTORackLeft, 9001, 5)
 goto_gtecs_filt = PyroDaemon('filt', IP.GOTORackLeft, 9002, 5)
