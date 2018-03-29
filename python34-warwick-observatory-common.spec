@@ -12,10 +12,10 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 Name:           python34-warwick-observatory-common
-Version:        2.1.5
+Version:        2.1.6
 Release:        0
 License:        GPL3
-Summary:        Common backend code for the Warwick one-metre telescope
+Summary:        Common backend code for the Warwick La Palma telescopes
 Url:            https://github.com/warwick-one-metre/
 BuildArch:      noarch
 %if 0%{?suse_version}
@@ -26,7 +26,7 @@ Requires:       python34, python34-Pyro4
 %endif
 
 %description
-Part of the observatory software for the Warwick one-meter telescope.
+Part of the observatory software for the Warwick one-meter telescope and other La Palma facilities.
 
 warwick-observatory-common holds the common backend code shared by the other utilities.
 

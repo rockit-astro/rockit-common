@@ -96,4 +96,13 @@ goto_gtecs_exq = PyroDaemon('exq', IP.GOTORackLeft, 9005, 5)
 goto_gtecs_power = PyroDaemon('power', IP.GOTORackLeft, 9006, 5)
 goto_gtecs_conditions = PyroDaemon('conditions', IP.GOTORackLeft, 9031, 5)
 
+rasa_operations = PyroDaemon('rasa_operations_daemon', IP.RASAMain, 9030, 5)
+rasa_environment = PyroDaemon('rasa_environment_daemon', IP.RASAMain, 9031, 5)
+rasa_pipeline = PyroDaemon('rasa_pipeline_daemon', IP.RASAMain, 9032, 5)
+rasa_power = PyroDaemon('rasa_power_daemon', IP.RASAMain, 9033, 5)
+rasa_dome = PyroDaemon('rasa_dome_daemon', IP.RASAMain, 9034, 5)
+rasa_telescope = PyroDaemon('rasa_telescope_daemon', IP.RASAMain, 9035, 5)
+rasa_focus = PyroDaemon('rasa_focus_daemon', IP.RASAMain, 9036, 5)
+rasa_camera = PyroDaemon('rasa_camera_daemon', IP.RASAMain, 9037, 5)
+
 # pylint: enable=invalid-name
