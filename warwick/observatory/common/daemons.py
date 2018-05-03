@@ -104,5 +104,6 @@ rasa_dome = PyroDaemon('rasa_dome_daemon', IP.RASAMain, 9034, 5)
 rasa_telescope = PyroDaemon('rasa_telescope_daemon', IP.RASAMain, 9035, 5)
 rasa_focus = PyroDaemon('rasa_focus_daemon', IP.RASAMain, 9036, 5)
 rasa_camera = PyroDaemon('rasa_camera_daemon', IP.RASAMain, 9037, 5)
+rasa_diskspace = PyroDaemon('rasa_diskspace_daemon', IP.RASAMain, 9039, 5)
 
 # pylint: enable=invalid-name
