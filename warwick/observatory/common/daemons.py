@@ -68,7 +68,9 @@ tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.GOTOServer, 9020, 5)
 goto_ups = PyroDaemon('goto_ups_daemon', IP.GOTOServer, 9021, 5)
 goto_vaisala = PyroDaemon('goto_vaisala_daemon', IP.GOTOServer, 9022, 5)
+
 superwasp_roomalert = PyroDaemon('superwasp_roomalert_daemon', IP.GOTOServer, 9023, 5)
+superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.GOTOServer, 9024, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
