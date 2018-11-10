@@ -72,6 +72,7 @@ goto_vaisala = PyroDaemon('goto_vaisala_daemon', IP.GOTOServer, 9022, 5)
 
 superwasp_roomalert = PyroDaemon('superwasp_roomalert_daemon', IP.GOTOServer, 9023, 5)
 superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.GOTOServer, 9024, 5)
+superwasp_preview = PyroDaemon('superwasp_preview', IP.GOTOServer, 9025, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
