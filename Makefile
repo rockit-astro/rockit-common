@@ -9,4 +9,8 @@ package:
 	${RPMBUILD} -ba python34-warwick-observatory-common.spec
 	mv build/noarch/*.rpm .
 	rm -rf build
+	mkdir -p build
+	${RPMBUILD} -ba python36-warwick-observatory-common.spec
+	mv build/noarch/*.rpm .
+	rm -rf build
 
