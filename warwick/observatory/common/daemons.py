@@ -98,6 +98,7 @@ goto_gtecs_foc = PyroDaemon('foc', IP.GOTORackRight, 9003, 5)
 goto_gtecs_cam = PyroDaemon('cam', IP.GOTORackRight, 9004, 5)
 goto_gtecs_exq = PyroDaemon('exq', IP.GOTORackRight, 9005, 5)
 goto_gtecs_power = PyroDaemon('power', IP.GOTORackRight, 9006, 5)
+goto_gtecs_dome = PyroDaemon('dome', IP.GOTORackRight, 9007, 5)
 goto_gtecs_conditions = PyroDaemon('conditions', IP.GOTORackRight, 9030, 5)
 
 rasa_operations = PyroDaemon('rasa_operations_daemon', IP.RASAMain, 9030, 5)
