@@ -12,7 +12,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 Name:           python34-warwick-observatory-common
-Version:        2.1.11
+Version:        2.1.12
 Release:        0
 License:        GPL3
 Summary:        Common backend code for the Warwick La Palma telescopes
