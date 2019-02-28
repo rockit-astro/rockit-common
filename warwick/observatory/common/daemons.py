@@ -69,6 +69,7 @@ eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
 goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.GOTOServer, 9020, 5)
 goto_ups = PyroDaemon('goto_ups_daemon', IP.GOTOServer, 9021, 5)
 goto_vaisala = PyroDaemon('goto_vaisala_daemon', IP.GOTOServer, 9022, 5)
+ing_robodimm = PyroDaemon('ing_robodimm_daemon', IP.GOTOServer, 9026, 5)
 
 superwasp_roomalert = PyroDaemon('superwasp_roomalert_daemon', IP.GOTOServer, 9023, 5)
 superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.GOTOServer, 9024, 5)
