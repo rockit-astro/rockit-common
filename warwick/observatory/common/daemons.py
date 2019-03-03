@@ -63,6 +63,8 @@ class PyroDaemon(object):
 # pylint: disable=invalid-name
 observatory_log = PyroDaemon('observatory_log_daemon', IP.GOTOServer, 9016, 5)
 observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.GOTOServer, 9012, 5)
+observatory_environment = PyroDaemon('observatory_environment_daemon', IP.GOTOServer, 9028, 5)
+
 superwasp_log = PyroDaemon('superwasp_daemon', IP.GOTOServer, 9007, 5)
 tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
