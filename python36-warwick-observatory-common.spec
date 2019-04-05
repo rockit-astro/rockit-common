@@ -17,13 +17,13 @@ warwick-observatory-common holds the common backend code shared by the other uti
 rsync -av --exclude=build .. .
 
 %build
-%{__python3_other} setup.py build
+%{__python3} setup.py build
 
 %install
-%{__python3_other} setup.py install --prefix=%{_prefix} --root=%{buildroot}
+%{__python3} setup.py install --prefix=%{_prefix} --root=%{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%{python3_other_sitelib}/*
+%{python3_sitelib}/*
 
 %changelog
