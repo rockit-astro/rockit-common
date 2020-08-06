@@ -6,7 +6,7 @@ RPMBUILD = rpmbuild --define "_topdir %(pwd)/build" \
 
 package:
 	mkdir -p build
-	${RPMBUILD} -ba python36-warwick-observatory-common.spec
+	${RPMBUILD} -ba python3-warwick-observatory-common.spec
 	mv build/noarch/*.rpm .
 	rm -rf build
 
