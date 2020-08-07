@@ -5,6 +5,7 @@ The main components are:
 * `warwick.observatory.common.IP`: List of IP addresses used by daemons
 * `warwick.observatory.common.daemons`: Pyro "phone book" specifying the IP and port for each daemon.
 * `warwick.observatory.common.pyro_client_matches`: Pyro helper for white listing priviledged commands.
+* `warwick.observatory.common.key_for_current_ip`: Helper to return the dictionary key that has a value matching the host IP.
 * `warwick.observatory.common.TryLock`: A helper class for taking locks that should fail instead of blocking.
 * `warwick.observatory.common.log`: A helper class for writing to the dashboard log database.
 
