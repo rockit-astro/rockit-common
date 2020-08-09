@@ -43,4 +43,4 @@ class IP:
     RASAWindowsVM = '10.2.6.218'
     RASAPi = '10.2.6.43'
 
-    SWASPGPSPi = '10.2.6.219'
+    SWASPGPSPi = '10.2.6.120'
