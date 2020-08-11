@@ -38,6 +38,7 @@ class IP:
     GOTOServer = '10.2.6.100'
     GOTORackLeft = '10.2.6.9'
     GOTORackRight = '10.2.6.10'
+    GOTOControl = '10.2.6.20'
 
     RASAMain = '10.2.6.217'
     RASAWindowsVM = '10.2.6.218'
