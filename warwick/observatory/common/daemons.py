@@ -78,6 +78,7 @@ superwasp_roomalert = PyroDaemon('superwasp_roomalert_daemon', IP.GOTOServer, 90
 superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.GOTOServer, 9024, 5)
 superwasp_preview = PyroDaemon('superwasp_preview', IP.GOTOServer, 9025, 5)
 superwasp_power = PyroDaemon('superwasp_power_daemon', IP.GOTOServer, 9027, 5)
+superwasp_aircon = PyroDaemon('superwasp_aircon_daemon', IP.GOTOServer, 9030, 5)
 superwasp_leo_observer = PyroDaemon('superwasp_leo_observer', IP.SWASPGPSPi, 9001, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
