@@ -87,7 +87,7 @@ onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5
 onemetre_vaisala = PyroDaemon('onemetre_vaisala_daemon', IP.OneMetreDome, 9001, 5)
 onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', IP.OneMetreDomeAlert, 9008, 5)
 onemetre_power = PyroDaemon('onemetre_power_daemon', IP.OneMetreDome, 9009, 5)
-onemetre_rain = PyroDaemon('onemetre_rain_daemon', IP.OneMetreDome, 9017, 5)
+onemetre_rain = PyroDaemon('onemetre_rain_daemon', IP.OneMetreRainSensors, 9017, 5)
 onemetre_dome = PyroDaemon('dome_daemon', IP.OneMetreDome, 9004, 5)
 
 onemetre_telescope = PyroDaemon('telescope_daemon', IP.OneMetreTCS, 9003, 5)

@@ -27,6 +27,7 @@ class IP:
     OneMetreDome = '10.2.6.202'
     OneMetreTCS = '10.2.6.203'
     OneMetreDomeAlert = '10.2.6.204'
+    OneMetreRainSensors = '10.2.6.205'
     OneMetreRoomAlert = '10.2.6.209'
     OneMetreMainUPS = '10.2.6.210'
     OneMetreDomeUPS = '10.2.6.211'
