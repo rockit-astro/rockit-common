@@ -121,4 +121,6 @@ rasa_camera = PyroDaemon('rasa_camera_daemon', IP.RASAMain, 9037, 5)
 rasa_diskspace = PyroDaemon('rasa_diskspace_daemon', IP.RASAMain, 9039, 5)
 rasa_internal_environment = PyroDaemon('rasa_internal_environment', IP.RASAPi, 9040, 5)
 
+localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000, 5)
+
 # pylint: enable=invalid-name

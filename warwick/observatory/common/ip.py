@@ -47,3 +47,5 @@ class IP:
     RASAPi = '10.2.6.43'
 
     SWASPGPSPi = '10.2.6.120'
+
+    LocalHost = '127.0.0.1'

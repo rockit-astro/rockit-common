@@ -1,5 +1,5 @@
 Name:           python3-warwick-observatory-common
-Version:        2.2.7
+Version:        2.2.8
 Release:        0
 License:        GPL3
 Summary:        Common backend code for the Warwick La Palma telescopes
