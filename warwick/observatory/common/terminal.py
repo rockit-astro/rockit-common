@@ -15,10 +15,13 @@
 # along with warwick.observatory.  If not, see <http://www.gnu.org/licenses/>.
 
 """
-Common code for the Warwick 1m telescope
+Terminal formatting helpers
 """
 
-from . import log, daemons, helpers
-from .TryLock import TryLock
-from .ip import IP
-from .terminal import TFmt
+class TFmt:
+    Green = u'\033[92m'
+    Red = u'\033[91m'
+    Cyan = u'\033[96m'
+    Yellow = u'\033[93m'
+    Bold = u'\033[1m'
+    Clear = u'\033[0m'
