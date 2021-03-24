@@ -88,6 +88,7 @@ onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', IP.OneMetreDomeAler
 onemetre_power = PyroDaemon('onemetre_power_daemon', IP.OneMetreDome, 9009, 5)
 onemetre_rain = PyroDaemon('onemetre_rain_daemon', IP.OneMetreRainSensors, 9017, 5)
 onemetre_dome = PyroDaemon('dome_daemon', IP.OneMetreDome, 9004, 5)
+onemetre_dehumidifier = PyroDaemon('onemetre_dehumidifier_daemon', IP.OneMetreDome, 9041, 5)
 
 onemetre_telescope = PyroDaemon('telescope_daemon', IP.OneMetreTCS, 9003, 5)
 onemetre_tcs_diskspace = PyroDaemon('onemetre_diskspace_daemon', IP.OneMetreTCS, 9008, 5)
@@ -119,7 +120,12 @@ rasa_focus = PyroDaemon('rasa_focus_daemon', IP.RASAMain, 9036, 5)
 rasa_camera = PyroDaemon('rasa_camera_daemon', IP.RASAMain, 9037, 5)
 rasa_diskspace = PyroDaemon('rasa_diskspace_daemon', IP.RASAMain, 9039, 5)
 rasa_internal_environment = PyroDaemon('rasa_internal_environment', IP.RASAPi, 9040, 5)
+rasa_dehumidifier = PyroDaemon('rasa_dehumidifier_daemon', IP.RASAMain, 9041, 5)
 
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000, 5)
+localhost_test2 = PyroDaemon('localhost_test_daemon2', IP.LocalHost, 9001, 5)
+localhost_test3 = PyroDaemon('localhost_test_daemon3', IP.LocalHost, 9002, 5)
+localhost_test4 = PyroDaemon('localhost_test_daemon4', IP.LocalHost, 9003, 5)
+localhost_test5 = PyroDaemon('localhost_test_daemon5', IP.LocalHost, 9004, 5)
 
 # pylint: enable=invalid-name
