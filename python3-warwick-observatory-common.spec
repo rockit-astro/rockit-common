@@ -5,7 +5,7 @@ License:        GPL3
 Summary:        Common backend code for the Warwick La Palma telescopes
 Url:            https://github.com/warwick-one-metre/
 BuildArch:      noarch
-Requires:       python3, python3-Pyro4
+Requires:       python3, python3-jsonschema, python3-Pyro4
 
 %description
 Part of the observatory software for the Warwick La Palma telescopes.
