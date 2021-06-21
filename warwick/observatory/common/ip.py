@@ -35,15 +35,12 @@ class IP:
     OneMetreRackNetwork = '10.2.6.212'
     OneMetreTelNetwork = '10.2.6.213'
 
-    NitesMain = '10.2.6.181'
+    CLASPTCS = '10.2.6.181'
+
     GOTOServer = '10.2.6.100'
     GOTORackLeft = '10.2.6.9'
     GOTORackRight = '10.2.6.10'
     GOTOControl = '10.2.6.20'
-
-    RASAMain = '10.2.6.217'
-    RASAWindowsVM = '10.2.6.218'
-    RASAPi = '10.2.6.43'
 
     SWASPGPSPi = '10.2.6.120'
 
