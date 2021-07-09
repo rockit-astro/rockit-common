@@ -43,6 +43,7 @@ class IP:
     GOTORackRight = '10.2.6.10'
     GOTOControl = '10.2.6.20'
 
-    SWASPGPSPi = '10.2.6.120'
+    SWASPTCS = '10.2.6.217'
+    SWASPCameraPi = '10.2.6.120'
 
     LocalHost = '127.0.0.1'

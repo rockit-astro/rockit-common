@@ -65,7 +65,6 @@ observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.GOTOServe
 observatory_environment = PyroDaemon('observatory_environment_daemon', IP.GOTOServer, 9028, 5)
 observatory_ephemeris = PyroDaemon('observatory_environment_daemon', IP.GOTOServer, 9029, 5)
 
-superwasp_log = PyroDaemon('superwasp_daemon', IP.GOTOServer, 9007, 5)
 tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
 goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.GOTOServer, 9020, 5)
@@ -75,11 +74,18 @@ ing_robodimm = PyroDaemon('ing_robodimm_daemon', IP.GOTOServer, 9026, 5)
 
 superwasp_roomalert = PyroDaemon('superwasp_roomalert_daemon', IP.GOTOServer, 9023, 5)
 superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.GOTOServer, 9024, 5)
-superwasp_preview = PyroDaemon('superwasp_preview', IP.GOTOServer, 9025, 5)
 superwasp_power = PyroDaemon('superwasp_power_daemon', IP.GOTOServer, 9027, 5)
 superwasp_aircon = PyroDaemon('superwasp_aircon_daemon', IP.GOTOServer, 9030, 5)
 superwasp_aurora = PyroDaemon('superwasp_aurora_daemon', IP.GOTOServer, 9031, 5)
-superwasp_leo_observer = PyroDaemon('superwasp_leo_observer', IP.SWASPGPSPi, 9001, 5)
+
+superwasp_telescope = PyroDaemon('superwasp_telescope_daemon', IP.SWASPTCS, 9003, 5)
+superwasp_operations = PyroDaemon('superwasp_operations_daemon', IP.SWASPTCS, 9015, 5)
+superwasp_cam1 = PyroDaemon('superwasp_camera_daemon_1', IP.SWASPCameraPi, 9040, 5)
+superwasp_cam2 = PyroDaemon('superwasp_camera_daemon_2', IP.SWASPCameraPi, 9041, 5)
+superwasp_cam3 = PyroDaemon('superwasp_camera_daemon_3', IP.SWASPCameraPi, 9042, 5)
+superwasp_cam4 = PyroDaemon('superwasp_camera_daemon_4', IP.SWASPCameraPi, 9043, 5)
+superwasp_pipeline = PyroDaemon('superwasp_pipeline', IP.SWASPTCS, 9032, 5)
+superwasp_diskspace = PyroDaemon('superwasp_diskspace_daemon', IP.SWASPCameraPi, 9008, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
