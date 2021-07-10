@@ -67,7 +67,8 @@ observatory_ephemeris = PyroDaemon('observatory_environment_daemon', IP.GOTOServ
 
 tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
-goto_roomalert = PyroDaemon('goto_roomalert_daemon', IP.GOTOServer, 9020, 5)
+goto_dome1_roomalert = PyroDaemon('goto_dome1_roomalert_daemon', IP.GOTOServer, 9019, 5)
+goto_dome2_roomalert = PyroDaemon('goto_dome2_roomalert_daemon', IP.GOTOServer, 9020, 5)
 goto_ups = PyroDaemon('goto_ups_daemon', IP.GOTOServer, 9021, 5)
 goto_vaisala = PyroDaemon('goto_vaisala_daemon', IP.GOTOServer, 9022, 5)
 ing_robodimm = PyroDaemon('ing_robodimm_daemon', IP.GOTOServer, 9026, 5)
