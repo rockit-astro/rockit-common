@@ -18,10 +18,10 @@
 Configuration file validation helpers
 """
 
-import jsonschema
 import os.path
 import sys
 import traceback
+import jsonschema
 from warwick.observatory.common import daemons, IP
 
 
@@ -56,22 +56,28 @@ def directory_path_validator(validator, value, instance, schema):
 # pylint: enable=unused-argument
 
 
+def validation_errors(json, schema, custom_validators=None):
+    """Identify schema violations in a given json object
+       Returns an iterator of schema violations
+    """
+    validators = dict(jsonschema.Draft4Validator.VALIDATORS)
+    if custom_validators:
+        validators.update(custom_validators)
+
+    validator = jsonschema.validators.create(
+        meta_schema=jsonschema.Draft4Validator.META_SCHEMA,
+        validators=validators)
+
+    return validator(schema).iter_errors(json)
+
+
 def validate_config(json, schema, custom_validators=None, print_exception=False):
     """Tests whether a json object defines a valid environment config file
-       Raises SchemaViolationError on error
+       Raises ConfigSchemaViolationError on error
     """
     errors = []
     try:
-        validators = dict(jsonschema.Draft4Validator.VALIDATORS)
-        if custom_validators:
-            validators.update(custom_validators)
-
-        validator = jsonschema.validators.create(
-            meta_schema=jsonschema.Draft4Validator.META_SCHEMA,
-            validators=validators)
-
-        for error in sorted(validator(schema).iter_errors(json),
-                            key=lambda e: e.path):
+        for error in sorted(validation_errors(json, schema, custom_validators), key=lambda e: e.path):
             if error.path:
                 path = '->'.join([str(p) for p in error.path])
                 message = path + ': ' + error.message
