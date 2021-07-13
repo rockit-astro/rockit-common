@@ -18,14 +18,12 @@
 Directory of Pyro daemons
 """
 
-# pylint: disable=too-few-public-methods
-
 import datetime
 import Pyro4
 
 from .ip import IP
 
-class PyroDaemon(object):
+class PyroDaemon:
     """Encodes a reference to a remote Pyro4 daemon"""
     def __init__(self, name, host, port, default_timeout):
         self.name = name

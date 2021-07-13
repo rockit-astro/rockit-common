@@ -35,7 +35,7 @@ def info(table, message):
     try:
         if socket.gethostbyname(socket.gethostname()).startswith('10.2.6.'):
             with daemons.observatory_log.connect() as log:
-                return log.log_info(table, message)
+                log.log_info(table, message)
     except Exception as e:
         print('Failed to log info message with exception: ' + str(e))
         print('Original message was: (' + table + ') ' + message)
@@ -47,7 +47,7 @@ def warning(table, message):
     try:
         if socket.gethostbyname(socket.gethostname()).startswith('10.2.6.'):
             with daemons.observatory_log.connect() as log:
-                return log.log_warning(table, message)
+                log.log_warning(table, message)
     except Exception as e:
         print('Failed to log warning message with exception: ' + str(e))
         print('Original message was: (' + table + ') ' + message)
@@ -59,7 +59,7 @@ def error(table, message):
     try:
         if socket.gethostbyname(socket.gethostname()).startswith('10.2.6.'):
             with daemons.observatory_log.connect() as log:
-                return log.log_error(table, message)
+                log.log_error(table, message)
     except Exception as e:
         print('Failed to log error message with exception: ' + str(e))
         print('Original message was: (' + table + ') ' + message)

@@ -19,8 +19,7 @@
 Helper object for use with `with` statements
 """
 
-# pylint: disable=too-few-public-methods
-class TryLock(object):
+class TryLock:
     """Helper object for use with `with` statements"""
     def __init__(self, lock):
         self._lock = lock
@@ -34,4 +33,3 @@ class TryLock(object):
         if self._locked:
             self._lock.release()
             self._locked = False
-# pylint: enable=too-few-public-methods
