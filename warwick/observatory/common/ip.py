@@ -45,6 +45,6 @@ class IP:
     GOTODome2Pi = '10.2.6.49'
 
     SWASPTCS = '10.2.6.217'
-    SWASPCameraPi = '10.2.6.120'
-
+    SWASPCameraPi1 = '10.2.6.120'
+    SWASPCameraPi2 = '10.2.6.121'
     LocalHost = '127.0.0.1'
