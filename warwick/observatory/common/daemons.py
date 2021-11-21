@@ -122,6 +122,7 @@ clasp_camera_1 = PyroDaemon('clasp_camera_daemon_1', IP.CLASPTCS, 9037, 5)
 clasp_camera_2 = PyroDaemon('clasp_camera_daemon_2', IP.CLASPDAS2, 9038, 5)
 clasp_diskspace = PyroDaemon('clasp_diskspace_daemon', IP.CLASPTCS, 9039, 5)
 clasp_roomalert = PyroDaemon('clasp_roomalert_daemon', IP.CLASPTCS, 9008, 5)
+clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041, 5)
 
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000, 5)
 localhost_test2 = PyroDaemon('localhost_test_daemon2', IP.LocalHost, 9001, 5)
