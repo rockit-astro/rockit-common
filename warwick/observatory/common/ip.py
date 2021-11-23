@@ -36,6 +36,7 @@ class IP:
     OneMetreTelNetwork = '10.2.6.213'
 
     CLASPTCS = '10.2.6.181'
+    CLASPDAS1 = '10.2.6.182'
     CLASPDAS2 = '10.2.6.182'
 
     GOTOServer = '10.2.6.100'
