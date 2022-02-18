@@ -72,8 +72,8 @@ goto_vaisala = PyroDaemon('goto_vaisala_daemon', IP.GOTOServer, 9022, 5)
 ing_robodimm = PyroDaemon('ing_robodimm_daemon', IP.GOTOServer, 9026, 5)
 
 superwasp_roomalert = PyroDaemon('superwasp_roomalert_daemon', IP.GOTOServer, 9023, 5)
-superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.GOTOServer, 9024, 5)
-superwasp_power = PyroDaemon('superwasp_power_daemon', IP.GOTOServer, 9027, 5)
+superwasp_roofbattery = PyroDaemon('superwasp_roofbattery_daemon', IP.SWASPTCS, 9024, 5)
+superwasp_power = PyroDaemon('superwasp_power_daemon', IP.SWASPTCS, 9027, 5)
 superwasp_aircon = PyroDaemon('superwasp_aircon_daemon', IP.GOTOServer, 9030, 5)
 superwasp_aurora = PyroDaemon('superwasp_aurora_daemon', IP.GOTOServer, 9031, 5)
 
