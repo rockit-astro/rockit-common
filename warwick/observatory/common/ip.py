@@ -30,7 +30,7 @@ class IP:
 
     CLASPTCS = '10.2.6.181'
     CLASPDAS1 = '10.2.6.182'
-    CLASPDAS2 = '10.2.6.182'
+    CLASPDAS2 = '10.2.6.181'
 
     GOTOServer = '10.2.6.100'
     GOTOControl1 = '10.2.6.20'
