@@ -22,7 +22,6 @@ Directory of IP addresses
 
 class IP:
     """List of computer / device IPs"""
-    OneMetreFrontend = '10.2.6.201'
     OneMetreDome = '10.2.6.202'
     OneMetreTCS = '10.2.6.203'
     OneMetreDomeAlert = '10.2.6.204'
@@ -39,4 +38,7 @@ class IP:
     SWASPTCS = '10.2.6.124'
     SWASPCameraPi1 = '10.2.6.120'
     SWASPCameraPi2 = '10.2.6.121'
+    SWASPCameraPi3 = '10.2.6.122'
+    SWASPCameraPi4 = '10.2.6.123'
+
     LocalHost = '127.0.0.1'
