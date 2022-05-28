@@ -85,6 +85,7 @@ superwasp_cam3 = PyroDaemon('superwasp_camera_daemon_3', IP.SWASPCameraPi3, 9042
 superwasp_cam4 = PyroDaemon('superwasp_camera_daemon_4', IP.SWASPCameraPi4, 9043, 5)
 superwasp_pipeline = PyroDaemon('superwasp_pipeline', IP.SWASPTCS, 9032, 5)
 superwasp_diskspace = PyroDaemon('superwasp_diskspace_daemon', IP.SWASPTCS, 9008, 5)
+superwasp_lensheater = PyroDaemon('superwasp_lensheater_daemon', IP.SWASPTCS, 9050, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
 onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
