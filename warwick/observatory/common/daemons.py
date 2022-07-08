@@ -57,11 +57,12 @@ class PyroDaemon:
         pyro.requestLoop()
         print('{} MESSAGE: Exiting daemon {}'.format(datetime.datetime.utcnow(), uri))
 
+
 # pylint: disable=invalid-name
 observatory_log = PyroDaemon('observatory_log_daemon', IP.GOTOServer, 9016, 5)
 observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.GOTOServer, 9012, 5)
 observatory_environment = PyroDaemon('observatory_environment_daemon', IP.GOTOServer, 9028, 5)
-observatory_ephemeris = PyroDaemon('observatory_environment_daemon', IP.GOTOServer, 9029, 5)
+observatory_ephemeris = PyroDaemon('observatory_ephemeris_daemon', IP.GOTOServer, 9029, 5)
 
 tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
@@ -84,11 +85,14 @@ superwasp_cam2 = PyroDaemon('superwasp_camera_daemon_2', IP.SWASPCameraPi2, 9041
 superwasp_cam3 = PyroDaemon('superwasp_camera_daemon_3', IP.SWASPCameraPi3, 9042, 5)
 superwasp_cam4 = PyroDaemon('superwasp_camera_daemon_4', IP.SWASPCameraPi4, 9043, 5)
 superwasp_pipeline = PyroDaemon('superwasp_pipeline', IP.SWASPTCS, 9032, 5)
+superwasp_pipeline_cam1 = PyroDaemon('superwasp_pipeline_cam1', IP.SWASPTCS, 9033, 5)
+superwasp_pipeline_cam2 = PyroDaemon('superwasp_pipeline_cam2', IP.SWASPTCS, 9034, 5)
+superwasp_pipeline_cam3 = PyroDaemon('superwasp_pipeline_cam3', IP.SWASPTCS, 9035, 5)
+superwasp_pipeline_cam4 = PyroDaemon('superwasp_pipeline_cam4', IP.SWASPTCS, 9036, 5)
 superwasp_diskspace = PyroDaemon('superwasp_diskspace_daemon', IP.SWASPTCS, 9008, 5)
 superwasp_lensheater = PyroDaemon('superwasp_lensheater_daemon', IP.SWASPTCS, 9050, 5)
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
-onemetre_environment = PyroDaemon('environment_daemon', IP.OneMetreDome, 9002, 5)
 onemetre_vaisala = PyroDaemon('onemetre_vaisala_daemon', IP.OneMetreDome, 9001, 5)
 onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', IP.OneMetreDomeAlert, 9008, 5)
 onemetre_power = PyroDaemon('onemetre_power_daemon', IP.OneMetreDome, 9009, 5)
@@ -98,9 +102,11 @@ onemetre_dehumidifier = PyroDaemon('onemetre_dehumidifier_daemon', IP.OneMetreDo
 
 onemetre_telescope = PyroDaemon('telescope_daemon', IP.OneMetreTCS, 9003, 5)
 onemetre_tcs_diskspace = PyroDaemon('onemetre_diskspace_daemon', IP.OneMetreTCS, 9008, 5)
-onemetre_blue_camera = PyroDaemon('blue_camera_daemon', IP.OneMetreTCS, 9011, 5)
-onemetre_red_camera = PyroDaemon('red_camera_daemon', IP.OneMetreTCS, 9010, 5)
-onemetre_pipeline = PyroDaemon('pipeline_daemon', IP.OneMetreTCS, 9012, 5)
+onemetre_blue_camera = PyroDaemon('onemetre_camera_blue', IP.OneMetreTCS, 9011, 5)
+onemetre_red_camera = PyroDaemon('onemetre_camera_red', IP.OneMetreTCS, 9010, 5)
+onemetre_pipeline = PyroDaemon('onemetre_pipeline', IP.OneMetreTCS, 9012, 5)
+onemetre_pipeline_blue = PyroDaemon('onemetre_pipeline_blue', IP.OneMetreTCS, 9013, 5)
+onemetre_pipeline_red = PyroDaemon('onemetre_pipeline_red', IP.OneMetreTCS, 9014, 5)
 
 goto_dome1_gtecs_mnt = PyroDaemon('mnt', IP.GOTOControl1, 9001, 5)
 goto_dome1_gtecs_filt = PyroDaemon('filt', IP.GOTOControl1, 9002, 5)
@@ -123,8 +129,9 @@ goto_dome2_gtecs_ota = PyroDaemon('ota', IP.GOTOControl2, 9008, 5)
 goto_dome2_gtecs_conditions = PyroDaemon('conditions', IP.GOTOControl2, 9030, 5)
 
 clasp_operations = PyroDaemon('clasp_operations_daemon', IP.CLASPTCS, 9030, 5)
-clasp_pipeline_1 = PyroDaemon('clasp_pipeline_daemon_1', IP.CLASPDAS1, 9032, 5)
-clasp_pipeline_2 = PyroDaemon('clasp_pipeline_daemon_2', IP.CLASPDAS2, 9032, 5)
+clasp_pipeline = PyroDaemon('clasp_pipeline_daemon', IP.CLASPDAS1, 9032, 5)
+clasp_pipeline_cam1 = PyroDaemon('clasp_pipeline_daemon_cam1', IP.CLASPDAS1, 9033, 5)
+clasp_pipeline_cam2 = PyroDaemon('clasp_pipeline_daemon_cam2', IP.CLASPDAS1, 9034, 5)
 clasp_power = PyroDaemon('clasp_power_daemon', IP.CLASPTCS, 9033, 5)
 clasp_dome = PyroDaemon('clasp_dome_daemon', IP.CLASPTCS, 9034, 5)
 clasp_telescope = PyroDaemon('clasp_telescope_daemon', IP.CLASPTCS, 9035, 5)
