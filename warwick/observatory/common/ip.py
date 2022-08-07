@@ -26,8 +26,9 @@ class IP:
     OneMetreTCS = '10.2.6.203'
     OneMetreDomeAlert = '10.2.6.204'
     OneMetreRainSensors = '10.2.6.205'
-    OneMetreCameras = '10.2.6.206'
-    
+    OneMetreBlueCamera = '10.2.6.216'
+    OneMetreRedCamera = '10.2.6.217'
+ 
     CLASPTCS = '10.2.6.181'
     CLASPDAS1 = '10.2.6.182'
     CLASPDAS2 = '10.2.6.181'
