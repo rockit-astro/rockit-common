@@ -28,14 +28,17 @@ class IP:
     OneMetreRainSensors = '10.2.6.205'
     OneMetreBlueCamera = '10.2.6.216'
     OneMetreRedCamera = '10.2.6.217'
- 
+
     CLASPTCS = '10.2.6.181'
     CLASPDAS1 = '10.2.6.182'
     CLASPDAS2 = '10.2.6.181'
+    CLASPDomeAlert = '10.2.6.188'
 
     GOTOServer = '10.2.6.100'
     GOTOControl1 = '10.2.6.20'
     GOTOControl2 = '10.2.6.50'
+    GOTODomeAlert1 = '10.2.6.18'
+    GOTODomeAlert2 = '10.2.6.49'
 
     SWASPTCS = '10.2.6.124'
     SWASPCameraPi1 = '10.2.6.120'

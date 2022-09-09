@@ -66,8 +66,8 @@ observatory_ephemeris = PyroDaemon('observatory_ephemeris_daemon', IP.GOTOServer
 
 tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
-goto_dome1_roomalert = PyroDaemon('goto_dome1_roomalert_daemon', IP.GOTOServer, 9019, 5)
-goto_dome2_roomalert = PyroDaemon('goto_dome2_roomalert_daemon', IP.GOTOServer, 9020, 5)
+goto_dome1_domealert = PyroDaemon('goto1_domealert_daemon', IP.GOTODomeAlert1, 9008, 5)
+goto_dome2_domealert = PyroDaemon('goto2_domealert_daemon', IP.GOTODomeAlert2, 9008, 5)
 goto_ups = PyroDaemon('goto_ups_daemon', IP.GOTOServer, 9021, 5)
 goto_vaisala = PyroDaemon('goto_vaisala_daemon', IP.GOTOServer, 9022, 5)
 ing_robodimm = PyroDaemon('ing_robodimm_daemon', IP.GOTOServer, 9026, 5)
@@ -98,7 +98,7 @@ superwasp_lensheater = PyroDaemon('superwasp_lensheater_daemon', IP.SWASPTCS, 90
 
 onemetre_operations = PyroDaemon('operations_daemon', IP.OneMetreDome, 9015, 5)
 onemetre_vaisala = PyroDaemon('onemetre_vaisala_daemon', IP.OneMetreDome, 9001, 5)
-onemetre_roomalert = PyroDaemon('onemetre_roomalert_daemon', IP.OneMetreDomeAlert, 9008, 5)
+onemetre_domealert = PyroDaemon('onemetre_domealert_daemon', IP.OneMetreDomeAlert, 9008, 5)
 onemetre_power = PyroDaemon('onemetre_power_daemon', IP.OneMetreDome, 9009, 5)
 onemetre_rain = PyroDaemon('onemetre_rain_daemon', IP.OneMetreRainSensors, 9017, 5)
 onemetre_dome = PyroDaemon('dome_daemon', IP.OneMetreDome, 9004, 5)
@@ -144,7 +144,7 @@ clasp_camera_1 = PyroDaemon('clasp_camera_daemon_1', IP.CLASPDAS1, 9037, 5)
 clasp_camera_2 = PyroDaemon('clasp_camera_daemon_2', IP.CLASPDAS1, 9038, 5)
 clasp_diskspace_1 = PyroDaemon('clasp_diskspace_daemon_1', IP.CLASPDAS1, 9039, 5)
 clasp_diskspace_2 = PyroDaemon('clasp_diskspace_daemon_2', IP.CLASPDAS2, 9039, 5)
-clasp_roomalert = PyroDaemon('clasp_roomalert_daemon', IP.CLASPTCS, 9008, 5)
+clasp_domealert = PyroDaemon('clasp_domealert_daemon', IP.CLASPDomeAlert, 9008, 5)
 clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041, 5)
 
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000, 5)
