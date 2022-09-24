@@ -68,7 +68,8 @@ def validation_errors(json, schema, custom_validators=None):
         meta_schema=jsonschema.Draft4Validator.META_SCHEMA,
         validators=validators)
 
-    return validator(schema).iter_errors(json)
+    return validator(schema, format_checker=jsonschema.draft4_format_checker).iter_errors(json)
+
 
 
 def validate_config(json, schema, custom_validators=None, print_exception=False):
