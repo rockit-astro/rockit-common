@@ -1,4 +1,4 @@
-## Warwick common observatory code [![Travis CI build status](https://travis-ci.org/warwick-one-metre/warwick-observatory-common.svg?branch=master)](https://travis-ci.org/warwick-one-metre/warwick-observatory-common)
+## Warwick common observatory code
 
 Python module that contains common backend code that is shared by the other python utilities.
 The main components are:
