@@ -22,6 +22,9 @@ Directory of IP addresses
 
 class IP:
     """List of computer / device IPs"""
+    LocalHost = '127.0.0.1'
+
+    # Warwick La Palma telescopes
     OneMetreDome = '10.2.6.202'
     OneMetreTCS = '10.2.6.203'
     OneMetreDomeAlert = '10.2.6.204'
@@ -46,4 +49,7 @@ class IP:
     SWASPCameraPi3 = '10.2.6.122'
     SWASPCameraPi4 = '10.2.6.123'
 
-    LocalHost = '127.0.0.1'
+    # Windmill Hill Observatory at Warwick University
+    # TODO: Assign final IPs from ITS
+    WarwickDome = '10.2.7.1'
+    WarwickTCS = '10.2.7.2'
