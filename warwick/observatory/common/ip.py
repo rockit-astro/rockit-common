@@ -43,11 +43,11 @@ class IP:
     GOTODomeAlert1 = '10.2.6.18'
     GOTODomeAlert2 = '10.2.6.49'
 
-    SWASPTCS = '10.2.6.124'
-    SWASPCameraPi1 = '10.2.6.120'
-    SWASPCameraPi2 = '10.2.6.121'
-    SWASPCameraPi3 = '10.2.6.122'
-    SWASPCameraPi4 = '10.2.6.123'
+    SWASPTCS = '10.2.6.160'
+    SWASPCameraPi1 = '10.2.6.161'
+    SWASPCameraPi2 = '10.2.6.162'
+    SWASPCameraPi3 = '10.2.6.163'
+    SWASPCameraPi4 = '10.2.6.164'
 
     # Windmill Hill Observatory at Warwick University
     # TODO: Assign final IPs from ITS
