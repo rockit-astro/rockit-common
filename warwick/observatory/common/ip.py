@@ -50,6 +50,5 @@ class IP:
     SWASPCameraPi4 = '10.2.6.164'
 
     # Windmill Hill Observatory at Warwick University
-    # TODO: Assign final IPs from ITS
-    WarwickDome = '10.2.7.1'
-    WarwickTCS = '10.2.7.2'
+    WarwickDome = '172.19.0.160'
+    WarwickTCS = '172.19.0.161'
