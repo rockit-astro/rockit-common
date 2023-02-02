@@ -48,6 +48,9 @@ class IP:
     SWASPCameraPi2 = '10.2.6.162'
     SWASPCameraPi3 = '10.2.6.163'
     SWASPCameraPi4 = '10.2.6.164'
+    
+    HalfMetreTCS = '10.2.6.120'
+    HalfMetreDomeAlert = '10.2.6.116'
 
     # Windmill Hill Observatory at Warwick University
     WarwickDome = '172.19.0.160'
