@@ -141,7 +141,7 @@ halfmetre_cam = PyroDaemon('halfmetre_camera_daemon', IP.HalfMetreTCS, 9040, 5)
 halfmetre_focuser = PyroDaemon('halfmetre_focuser_daemon', IP.HalfMetreTCS, 9041, 5)
 halfmetre_pipeline = PyroDaemon('halfmetre_pipeline', IP.HalfMetreTCS, 9032, 5)
 halfmetre_pipeline_cam = PyroDaemon('halfmetre_pipeline_cam', IP.HalfMetreTCS, 9033, 5)
-halfmetre_diskspace_cam = PyroDaemon('halfmetre_diskspace', IP.HalfMetreTCS, 9008, 5)
+halfmetre_diskspace = PyroDaemon('halfmetre_diskspace', IP.HalfMetreTCS, 9008, 5)
 
 clasp_operations = PyroDaemon('clasp_operations_daemon', IP.CLASPTCS, 9030, 5)
 clasp_power = PyroDaemon('clasp_power_daemon', IP.CLASPTCS, 9033, 5)
