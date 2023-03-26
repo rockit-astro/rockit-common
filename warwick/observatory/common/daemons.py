@@ -158,6 +158,9 @@ clasp_diskspace_2 = PyroDaemon('clasp_diskspace_daemon_2', IP.CLASPDAS2, 9039, 5
 clasp_domealert = PyroDaemon('clasp_domealert_daemon', IP.CLASPDomeAlert, 9008, 5)
 clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041, 5)
 
+clasp_swreduce_1 = PyroDaemon('clasp_swreduce_1', IP.CLASPDAS1, 9050, 5)
+clasp_swreduce_2 = PyroDaemon('clasp_swreduce_2', IP.CLASPDAS2, 9050, 5)
+
 warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000, 5)
 warwick_vaisala = PyroDaemon('warwick_vaisala_daemon', IP.WarwickTCS, 9000, 5)
 warwick_acp_monitor = PyroDaemon('warwick_acp_daemon', IP.WarwickTCS, 9001, 5)
