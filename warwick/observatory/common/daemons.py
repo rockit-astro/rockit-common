@@ -161,10 +161,15 @@ clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041, 
 clasp_swreduce_1 = PyroDaemon('clasp_swreduce_1', IP.CLASPDAS1, 9050, 5)
 clasp_swreduce_2 = PyroDaemon('clasp_swreduce_2', IP.CLASPDAS2, 9050, 5)
 
-warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000, 5)
-warwick_vaisala = PyroDaemon('warwick_vaisala_daemon', IP.WarwickTCS, 9000, 5)
 warwick_acp_monitor = PyroDaemon('warwick_acp_daemon', IP.WarwickTCS, 9001, 5)
 warwick_power = PyroDaemon('warwick_power_daemon', IP.WarwickTCS, 9002, 5)
+warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000, 5)
+warwick_environment = PyroDaemon('warwick_environment_daemon', IP.WarwickDome, 9001, 5)
+warwick_vaisala = PyroDaemon('warwick_vaisala_daemon', IP.WarwickDome, 9002, 5)
+warwick_cloudwatcher = PyroDaemon('warwick_cloudwatcher_daemon', IP.WarwickDome, 9003, 5)
+warwick_rain = PyroDaemon('warwick_rain_daemon', IP.WarwickDome, 9004, 5)
+
+goto_south_vaisala = PyroDaemon('goto_south_vaisala_daemon', IP.GOTOSSO, 9022, 5)
 
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000, 5)
 localhost_test2 = PyroDaemon('localhost_test_daemon2', IP.LocalHost, 9001, 5)
