@@ -168,6 +168,8 @@ warwick_environment = PyroDaemon('warwick_environment_daemon', IP.WarwickDome, 9
 warwick_vaisala = PyroDaemon('warwick_vaisala_daemon', IP.WarwickDome, 9002, 5)
 warwick_cloudwatcher = PyroDaemon('warwick_cloudwatcher_daemon', IP.WarwickDome, 9003, 5)
 warwick_rain = PyroDaemon('warwick_rain_daemon', IP.WarwickDome, 9004, 5)
+warwick_rhusb = PyroDaemon('warwick_rhusb_daemon', IP.WarwickDome, 9005, 5)
+warwick_ephemeris = PyroDaemon('warwick_ephemeris_daemon', IP.WarwickDome, 9006, 5)
 
 goto_south_vaisala = PyroDaemon('goto_south_vaisala_daemon', IP.GOTOSSO, 9022, 5)
 

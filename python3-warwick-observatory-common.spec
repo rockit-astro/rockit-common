@@ -1,5 +1,5 @@
 Name:           python3-warwick-observatory-common
-Version:        20230602
+Version:        20230603
 Release:        0
 License:        GPL3
 Summary:        Common backend code for the Warwick telescopes
