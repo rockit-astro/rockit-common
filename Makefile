@@ -10,3 +10,5 @@ package:
 	mv build/noarch/*.rpm .
 	rm -rf build
 
+install:
+	python3 setup.py install
