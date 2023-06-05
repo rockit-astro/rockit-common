@@ -21,8 +21,13 @@ Configuration file validation helpers
 import os.path
 import sys
 import traceback
-import jsonschema
 from warwick.observatory.common import daemons, IP
+
+try:
+    import jsonschema
+    disable_validation = False
+except ImportError:
+    disable_validation = True
 
 
 class ConfigSchemaViolationError(Exception):
@@ -35,6 +40,9 @@ class ConfigSchemaViolationError(Exception):
 # pylint: disable=unused-argument
 def daemon_name_validator(validator, value, instance, schema):
     """Validate a string as a daemon name from warwick.observatory.common.daemons"""
+    if disable_validation:
+        return
+
     try:
         getattr(daemons, instance)
     except Exception:
@@ -43,6 +51,9 @@ def daemon_name_validator(validator, value, instance, schema):
 
 def machine_name_validator(validator, value, instance, schema):
     """Validate a string as a machine name from warwick.observatory.common.IP"""
+    if disable_validation:
+        return
+
     try:
         getattr(IP, instance)
     except Exception:
@@ -51,6 +62,9 @@ def machine_name_validator(validator, value, instance, schema):
 
 def directory_path_validator(validator, value, instance, schema):
     """Validate a string as an existing directory path"""
+    if disable_validation:
+        return
+
     if not os.path.isdir(instance):
         yield jsonschema.ValidationError('{} is not a valid directory path'.format(instance))
 # pylint: enable=unused-argument
@@ -60,6 +74,9 @@ def validation_errors(json, schema, custom_validators=None):
     """Identify schema violations in a given json object
        Returns an iterator of schema violations
     """
+    if disable_validation:
+        return
+
     validators = dict(jsonschema.Draft4Validator.VALIDATORS)
     if custom_validators:
         validators.update(custom_validators)
@@ -76,6 +93,9 @@ def validate_config(json, schema, custom_validators=None, print_exception=False)
     """Tests whether a json object defines a valid environment config file
        Raises ConfigSchemaViolationError on error
     """
+    if disable_validation:
+        return
+
     errors = []
     try:
         for error in sorted(validation_errors(json, schema, custom_validators), key=lambda e: e.path):
