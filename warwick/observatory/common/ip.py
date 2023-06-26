@@ -33,7 +33,7 @@ class IP:
     OneMetreRedCamera = '10.2.6.217'
 
     CLASPTCS = '10.2.6.181'
-    CLASPDAS1 = '10.2.6.182'
+    CLASPDAS = '10.2.6.182'
     CLASPDAS2 = '10.2.6.183'
     CLASPDomeAlert = '10.2.6.188'
 
