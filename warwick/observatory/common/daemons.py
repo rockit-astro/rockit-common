@@ -63,7 +63,6 @@ observatory_log = PyroDaemon('observatory_log_daemon', IP.GOTOServer, 9016, 5)
 observatory_network_ping = PyroDaemon('observatory_netping_daemon', IP.GOTOServer, 9012, 5)
 observatory_environment = PyroDaemon('observatory_environment_daemon', IP.GOTOServer, 9028, 5)
 observatory_ephemeris = PyroDaemon('observatory_ephemeris_daemon', IP.GOTOServer, 9029, 5)
-observatory_skywatcher = PyroDaemon('observatory_skywatcher_daemon', IP.GOTOServer, 9031, 5)
 
 tng_log = PyroDaemon('tng_daemon', IP.GOTOServer, 9011, 5)
 eumetsat_opacity = PyroDaemon('eumetsat_daemon', IP.GOTOServer, 9013, 5)
@@ -142,6 +141,8 @@ halfmetre_focuser = PyroDaemon('halfmetre_focuser_daemon', IP.HalfMetreTCS, 9041
 halfmetre_pipeline = PyroDaemon('halfmetre_pipeline', IP.HalfMetreTCS, 9032, 5)
 halfmetre_pipeline_cam = PyroDaemon('halfmetre_pipeline_cam', IP.HalfMetreTCS, 9033, 5)
 halfmetre_diskspace = PyroDaemon('halfmetre_diskspace', IP.HalfMetreTCS, 9008, 5)
+halfmetre_vaisala = PyroDaemon('halfmetre_vaisala', IP.HalfMetreTCS, 9020, 5)
+halfmetre_cloudwatcher = PyroDaemon('halfmetre_cloudwatcher_daemon', IP.HalfMetreTCS, 9021, 5)
 
 clasp_operations = PyroDaemon('clasp_operations_daemon', IP.CLASPTCS, 9030, 5)
 clasp_power = PyroDaemon('clasp_power_daemon', IP.CLASPTCS, 9033, 5)
