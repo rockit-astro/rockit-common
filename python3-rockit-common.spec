@@ -1,0 +1,25 @@
+Name:           python3-rockit-common
+Version:        %{_version}
+Release:        1
+Summary:        Common backend code for the Robotic Observatory Control Kit
+License:        GPL3
+Url:            https://github.com/rockit-astro/rockit-common
+BuildArch:      noarch
+BuildRequires:  python3-devel
+
+%description
+
+%prep
+rsync -av --exclude=build .. .
+
+%generate_buildrequires
+%pyproject_buildrequires -R
+
+%build
+%pyproject_wheel
+
+%install
+%pyproject_install
+%pyproject_save_files rockit
+
+%files -f %{pyproject_files}

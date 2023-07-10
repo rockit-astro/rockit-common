@@ -6,9 +6,12 @@ RPMBUILD = rpmbuild --define "_topdir %(pwd)/build" \
 
 package:
 	mkdir -p build
-	${RPMBUILD} -ba python3-warwick-observatory-common.spec
+	date --utc +%Y%m%d%H%M%S > VERSION
+	${RPMBUILD} --define "_version %(cat VERSION)" -ba python3-rockit-common.spec
 	mv build/noarch/*.rpm .
 	rm -rf build
 
 install:
-	python3 setup.py install
+	date --utc +%Y%m%d%H%M%S > VERSION
+	python3 -m build --outdir .
+	sudo pip install rockit.common-$(shell cat VERSION)-py3-none-any.whl
