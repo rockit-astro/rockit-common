@@ -1,18 +1,18 @@
 #
-# This file is part of warwick.observatory.common.
+# This file is part of the Robotic Observatory Control Kit (rockit)
 #
-# warwick.observatory.common is free software: you can redistribute it and/or modify
+# rockit is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# warwick.observatory.common is distributed in the hope that it will be useful,
+# rockit is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with warwick.observatory.common.  If not, see <http://www.gnu.org/licenses/>.
+# along with rockit.  If not, see <http://www.gnu.org/licenses/>.
 
 """
 Configuration file validation helpers
@@ -21,7 +21,8 @@ Configuration file validation helpers
 import os.path
 import sys
 import traceback
-from warwick.observatory.common import daemons, IP
+from . import daemons
+from .ip import IP
 
 try:
     import jsonschema
@@ -39,7 +40,7 @@ class ConfigSchemaViolationError(Exception):
 
 # pylint: disable=unused-argument
 def daemon_name_validator(validator, value, instance, schema):
-    """Validate a string as a daemon name from warwick.observatory.common.daemons"""
+    """Validate a string as a daemon name from rockit.common.daemons"""
     if disable_validation:
         return
 
@@ -50,7 +51,7 @@ def daemon_name_validator(validator, value, instance, schema):
 
 
 def machine_name_validator(validator, value, instance, schema):
-    """Validate a string as a machine name from warwick.observatory.common.IP"""
+    """Validate a string as a machine name from rockit.common.IP"""
     if disable_validation:
         return
 
@@ -86,7 +87,6 @@ def validation_errors(json, schema, custom_validators=None):
         validators=validators)
 
     return validator(schema, format_checker=jsonschema.draft4_format_checker).iter_errors(json)
-
 
 
 def validate_config(json, schema, custom_validators=None, print_exception=False):
