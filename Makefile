@@ -14,4 +14,4 @@ package:
 install:
 	date --utc +%Y%m%d%H%M%S > VERSION
 	python3 -m build --outdir .
-	sudo pip install rockit.common-$(shell cat VERSION)-py3-none-any.whl
+	sudo pip install rockit.common-$$(cat VERSION)-py3-none-any.whl
