@@ -5,13 +5,14 @@ RPMBUILD = rpmbuild --define "_topdir %(pwd)/build" \
         --define "_sourcedir %(pwd)"
 
 package:
-	mkdir -p build
-	date --utc +%Y%m%d%H%M%S > VERSION
-	${RPMBUILD} --define "_version %(cat VERSION)" -ba python3-rockit-common.spec
-	mv build/noarch/*.rpm .
-	rm -rf build
+	@mkdir -p build
+	@date --utc +%Y%m%d%H%M%S > VERSION
+	@${RPMBUILD} --define "_version %(cat VERSION)" -ba python3-rockit-common.spec
+	@mv build/noarch/*.rpm .
+	@rm -rf build VERSION
 
 install:
-	date --utc +%Y%m%d%H%M%S > VERSION
-	python3 -m build --outdir .
-	sudo pip install rockit.common-$$(cat VERSION)-py3-none-any.whl
+	@date --utc +%Y%m%d%H%M%S > VERSION
+	@python3 -m build --outdir .
+	@sudo pip3 install rockit.common-$$(cat VERSION)-py3-none-any.whl
+	@rm VERSION
