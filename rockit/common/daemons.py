@@ -79,6 +79,7 @@ superwasp_dehumidifier = PyroDaemon('superwasp_dehumidifier_daemon', IP.SWASPTCS
 superwasp_operations = PyroDaemon('superwasp_operations_daemon', IP.SWASPTCS, 9015, 5)
 superwasp_lensheater = PyroDaemon('superwasp_lensheater_daemon', IP.SWASPTCS, 9050, 5)
 superwasp_pipeline = PyroDaemon('superwasp_pipeline', IP.SWASPTCS, 9032, 5)
+superwasp_power_relay = PyroDaemon('superwasp_powerrelay_daemon', IP.SWASPTCS, 9033, 5)
 
 superwasp_cam1 = PyroDaemon('superwasp_camera_daemon_1', IP.SWASPCameraPi1, 9040, 5)
 superwasp_pipeline_cam1 = PyroDaemon('superwasp_pipeline_cam1', IP.SWASPCameraPi1, 9033, 5)
