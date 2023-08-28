@@ -54,7 +54,7 @@ class IP:
     HalfMetreDomeAlert = '10.2.6.116'
 
     # Windmill Hill Observatory at Warwick University
-    WarwickTCS = '172.19.0.160'
+    WarwickTCS = '127.0.0.1'
     WarwickDome = '172.19.0.161'
 
     # GOTO South (Siding Spring Observatory)
