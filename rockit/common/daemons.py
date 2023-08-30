@@ -176,6 +176,7 @@ warwick_rain = PyroDaemon('warwick_rain_daemon', IP.WarwickTCS, 9011, 5)
 warwick_ephemeris = PyroDaemon('warwick_ephemeris_daemon', IP.WarwickTCS, 9012, 5)
 warwick_environment = PyroDaemon('warwick_environment_daemon', IP.WarwickTCS, 9013, 5)
 warwick_operations = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9014, 5)
+warwick_log = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9015, 5)
 
 warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000, 5)
 warwick_rhusb = PyroDaemon('warwick_rhusb_daemon', IP.WarwickDome, 9001, 5)
