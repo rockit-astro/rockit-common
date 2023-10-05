@@ -158,6 +158,7 @@ clasp_pipeline_cam2 = PyroDaemon('clasp_pipeline_daemon_cam2', IP.CLASPDAS, 9034
 clasp_diskspace = PyroDaemon('clasp_diskspace_daemon', IP.CLASPDAS, 9039, 5)
 clasp_domealert = PyroDaemon('clasp_domealert_daemon', IP.CLASPDomeAlert, 9008, 5)
 clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041, 5)
+clasp_chiller = PyroDaemon('clasp_chiller_daemon', IP.CLASPDAS, 9042, 5)
 
 clasp_swreduce_1 = PyroDaemon('clasp_swreduce_1', IP.CLASPDAS, 9050, 5)
 clasp_swreduce_2 = PyroDaemon('clasp_swreduce_2', IP.CLASPDAS2, 9050, 5)
