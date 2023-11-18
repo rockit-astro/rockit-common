@@ -33,7 +33,8 @@ class IP:
 
     CLASPTCS = '10.2.6.181'
     CLASPDAS = '10.2.6.182'
-    CLASPDAS2 = '10.2.6.183'
+    CLASPCMOSVM = '10.2.6.185'
+    CLASPSWIRVM = '10.2.6.186'
     CLASPDomeAlert = '10.2.6.188'
 
     GOTOServer = '10.2.6.100'
@@ -47,7 +48,13 @@ class IP:
     SWASPCameraPi2 = '10.2.6.162'
     SWASPCameraPi3 = '10.2.6.163'
     SWASPCameraPi4 = '10.2.6.164'
-    
+    SWASPCameraVM1 = '10.2.6.165'
+    SWASPCameraVM2 = '10.2.6.166'
+    SWASPCameraVM3 = '10.2.6.167'
+    SWASPCameraVM4 = '10.2.6.168'
+    SWASPDAS1 = '10.2.6.173'
+    SWASPDAS2 = '10.2.6.175'
+
     HalfMetreTCS = '10.2.6.120'
     HalfMetreDomeAlert = '10.2.6.116'
 
