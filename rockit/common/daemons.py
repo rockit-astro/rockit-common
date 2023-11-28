@@ -182,6 +182,7 @@ warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000, 5)
 warwick_rhusb = PyroDaemon('warwick_rhusb_daemon', IP.WarwickDome, 9001, 5)
 
 goto_south_vaisala = PyroDaemon('goto_south_vaisala_daemon', IP.GOTOSSO, 9022, 5)
+goto_south_cloudwatcher = PyroDaemon('goto_south_cloudwatcher_daemon', IP.GOTOSSO, 9021, 5)
 
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000, 5)
 localhost_test2 = PyroDaemon('localhost_test_daemon2', IP.LocalHost, 9001, 5)
