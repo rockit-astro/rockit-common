@@ -64,3 +64,6 @@ class IP:
 
     # GOTO South (Siding Spring Observatory)
     GOTOSSO = '192.55.98.154'
+
+    # NGTS CMOS test machine (Paranal Observatory)
+    NGTSDASNUC = '10.2.5.115'
