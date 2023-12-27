@@ -165,6 +165,8 @@ clasp_domealert = PyroDaemon('clasp_domealert_daemon', IP.CLASPDomeAlert, 9008)
 clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041)
 clasp_chiller = PyroDaemon('clasp_chiller_daemon', IP.CLASPTCS, 9042)
 
+clasp_swreduce_1 = PyroDaemon('clasp_swreduce_1', IP.CLASPDAS, 9050)
+
 warwick_power = PyroDaemon('warwick_power_daemon', IP.WarwickTCS, 9001)
 warwick_telescope = PyroDaemon('warwick_telescope_daemon', IP.WarwickTCS, 9002)
 warwick_camera = PyroDaemon('warwick_camera_daemon', IP.WarwickTCS, 9003)
