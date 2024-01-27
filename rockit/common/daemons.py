@@ -107,6 +107,7 @@ onemetre_dehumidifier = PyroDaemon('onemetre_dehumidifier_daemon', IP.OneMetreDo
 
 onemetre_telescope = PyroDaemon('telescope_daemon', IP.OneMetreTCS, 9003)
 onemetre_red_focuser = PyroDaemon('onemetre_red_focuser_daemon', IP.OneMetreTCS, 9004)
+onemetre_covers = PyroDaemon('onemetre_covers_daemon', IP.OneMetreTCS, 9005)
 onemetre_tcs_diskspace = PyroDaemon('onemetre_diskspace_daemon', IP.OneMetreTCS, 9008)
 onemetre_blue_camera = PyroDaemon('onemetre_camera_blue', IP.OneMetreTCS, 9011)
 onemetre_red_camera = PyroDaemon('onemetre_camera_red', IP.OneMetreTCS, 9010)
