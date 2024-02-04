@@ -93,6 +93,8 @@ superwasp_diskspace_das1 = PyroDaemon('superwasp_diskspace_das1', IP.SWASPDAS1, 
 superwasp_diskspace_das2 = PyroDaemon('superwasp_diskspace_das2', IP.SWASPDAS2, 9009)
 superwasp_pipeline_astrometry_das1 = PyroDaemon('superwasp_pipeline_astrometry_das1', IP.SWASPDAS1, 9010)
 superwasp_pipeline_astrometry_das2 = PyroDaemon('superwasp_pipeline_astrometry_das2', IP.SWASPDAS2, 9011)
+superwasp_camvirt_das1 = PyroDaemon('superwasp_camvirt_daemon_das1', IP.SWASPDAS1, 9012)
+superwasp_camvirt_das2 = PyroDaemon('superwasp_camvirt_daemon_das2', IP.SWASPDAS2, 9013)
 
 superwasp_swreduce_1 = PyroDaemon('superwasp_swreduce_1', IP.SWASPDAS1, 9050)
 superwasp_swreduce_2 = PyroDaemon('superwasp_swreduce_2', IP.SWASPDAS2, 9050)
@@ -167,6 +169,7 @@ clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041)
 clasp_chiller = PyroDaemon('clasp_chiller_daemon', IP.CLASPTCS, 9042)
 
 clasp_swreduce_1 = PyroDaemon('clasp_swreduce_1', IP.CLASPDAS, 9050)
+clasp_camvirt_1 = PyroDaemon('clasp_camvirt_daemon_1', IP.CLASPDAS, 9040)
 
 warwick_power = PyroDaemon('warwick_power_daemon', IP.WarwickTCS, 9001)
 warwick_telescope = PyroDaemon('warwick_telescope_daemon', IP.WarwickTCS, 9002)
