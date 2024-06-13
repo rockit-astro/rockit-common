@@ -18,6 +18,9 @@
 Terminal formatting helpers
 """
 
+_console = None
+
+
 class TFmt:
     Green = u'\033[92m'
     Red = u'\033[91m'
@@ -25,3 +28,24 @@ class TFmt:
     Yellow = u'\033[93m'
     Bold = u'\033[1m'
     Clear = u'\033[0m'
+
+
+def print(*objects, sep=" ", end="\n", file=None, flush=False):
+    """
+    Replacement for the builtin print function using the rich module
+    with a custom theme
+    """
+    from rich.console import Console
+    global _console
+    if _console is None:
+        from rich.console import Theme
+        _console = Console(theme=Theme(inherit=False, styles={
+            'green': 'bright_green',
+            'red': 'bright_red',
+            'cyan': 'bright_cyan',
+            'yellow': 'bright_yellow'
+        }))
+
+    console = _console if file is None else Console(file=file)
+    return console.print(*objects, sep=sep, end=end)
+

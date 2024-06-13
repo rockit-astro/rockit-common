@@ -21,6 +21,6 @@ rockit common imports
 from . import log, daemons, helpers
 from .trylock import TryLock
 from .ip import IP
-from .terminal import TFmt
+from .terminal import TFmt, print
 from .validation import validation_errors, validate_config
 from .validation import daemon_name_validator, directory_path_validator, machine_name_validator
