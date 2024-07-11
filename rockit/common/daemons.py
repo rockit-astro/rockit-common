@@ -53,9 +53,9 @@ class PyroDaemon:
         pyro = Pyro4.Daemon(host=self.host, port=self.port)
         uri = pyro.register(daemon, objectId=self.name)
 
-        print('{} MESSAGE: Starting daemon {}'.format(datetime.datetime.utcnow(), uri))
+        print(f'{datetime.datetime.utcnow()} MESSAGE: Starting daemon {uri}')
         pyro.requestLoop()
-        print('{} MESSAGE: Exiting daemon {}'.format(datetime.datetime.utcnow(), uri))
+        print(f'{datetime.datetime.utcnow()} MESSAGE: Exiting daemon {uri}')
 
 
 # pylint: disable=invalid-name

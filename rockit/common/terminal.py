@@ -22,12 +22,12 @@ _console = None
 
 
 class TFmt:
-    Green = u'\033[92m'
-    Red = u'\033[91m'
-    Cyan = u'\033[96m'
-    Yellow = u'\033[93m'
-    Bold = u'\033[1m'
-    Clear = u'\033[0m'
+    Green = '\033[92m'
+    Red = '\033[91m'
+    Cyan = '\033[96m'
+    Yellow = '\033[93m'
+    Bold = '\033[1m'
+    Clear = '\033[0m'
 
 
 def print(*objects, sep=" ", end="\n", file=None, flush=False):
@@ -48,4 +48,3 @@ def print(*objects, sep=" ", end="\n", file=None, flush=False):
 
     console = _console if file is None else Console(file=file)
     return console.print(*objects, sep=sep, end=end)
-

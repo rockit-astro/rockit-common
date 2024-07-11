@@ -40,7 +40,7 @@ def get_daemon():
 
 def info(table, message):
     """Write an info message to the given table"""
-    print('INFO {}: {}'.format(table, message))
+    print(f'INFO {table}: {message}')
     try:
         daemon = get_daemon()
         if daemon:
@@ -54,7 +54,7 @@ def info(table, message):
 
 def warning(table, message):
     """Write a warning message to the given table"""
-    print('WARN {}: {}'.format(table, message))
+    print(f'WARN {table}: {message}')
     try:
         daemon = get_daemon()
         if daemon:
@@ -67,7 +67,7 @@ def warning(table, message):
 
 def error(table, message):
     """Write an error message to the given table"""
-    print('ERROR {}: {}'.format(table, message))
+    print(f'ERROR {table}: {message}')
     try:
         daemon = get_daemon()
         if daemon:

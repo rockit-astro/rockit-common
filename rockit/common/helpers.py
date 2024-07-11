@@ -54,4 +54,4 @@ def sexagesimal(angle):
     if negative:
         degrees *= -1
 
-    return '{:d}:{:02d}:{:05.2f}'.format(degrees, minutes, seconds)
+    return f'{degrees:d}:{minutes:02d}:{seconds:05.2f}'

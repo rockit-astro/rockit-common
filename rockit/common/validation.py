@@ -47,7 +47,7 @@ def daemon_name_validator(validator, value, instance, schema):
     try:
         getattr(daemons, instance)
     except Exception:
-        yield jsonschema.ValidationError('{} is not a valid daemon name'.format(instance))
+        yield jsonschema.ValidationError(f'{instance} is not a valid daemon name')
 
 
 def machine_name_validator(validator, value, instance, schema):
@@ -58,7 +58,7 @@ def machine_name_validator(validator, value, instance, schema):
     try:
         getattr(IP, instance)
     except Exception:
-        yield jsonschema.ValidationError('{} is not a valid machine name'.format(instance))
+        yield jsonschema.ValidationError(f'{instance} is not a valid machine name')
 
 
 def directory_path_validator(validator, value, instance, schema):
@@ -67,7 +67,7 @@ def directory_path_validator(validator, value, instance, schema):
         return
 
     if not os.path.isdir(instance):
-        yield jsonschema.ValidationError('{} is not a valid directory path'.format(instance))
+        yield jsonschema.ValidationError(f'{instance} is not a valid directory path')
 # pylint: enable=unused-argument
 
 
@@ -76,7 +76,7 @@ def validation_errors(json, schema, custom_validators=None):
        Returns an iterator of schema violations
     """
     if disable_validation:
-        return
+        return []
 
     validators = dict(jsonschema.Draft4Validator.VALIDATORS)
     if custom_validators:
