@@ -26,10 +26,10 @@ class IP:
     LocalHost = '127.0.0.1'
 
     # Warwick La Palma telescopes
+    OneMetreTCS = '10.2.6.201'
     OneMetreDome = '10.2.6.202'
-    OneMetreTCS = '10.2.6.203'
+    OneMetreDAS = '10.2.6.203'
     OneMetreDomeAlert = '10.2.6.204'
-    OneMetreRainSensors = '10.2.6.205'
 
     CLASPTCS = '10.2.6.181'
     CLASPDAS = '10.2.6.182'
