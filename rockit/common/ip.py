@@ -54,6 +54,8 @@ class IP:
     HalfMetreTCS = '10.2.6.120'
     HalfMetreDomeAlert = '10.2.6.116'
 
+    PortableTCS = '127.0.0.1'
+
     # Windmill Hill Observatory at Warwick University
     WarwickTCS = '172.19.0.160'
     WarwickDome = '172.19.0.161'
