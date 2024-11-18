@@ -32,7 +32,8 @@ class IP:
     OneMetreDomeAlert = '10.2.6.204'
 
     CLASPTCS = '10.2.6.181'
-    CLASPDAS = '10.2.6.182'
+    CLASPCMOS = '10.2.6.182'
+    CLASPSWIR = '10.2.6.187'
     CLASPCMOSVM = '10.2.6.185'
     CLASPSWIRVM = '10.2.6.186'
     CLASPDomeAlert = '10.2.6.188'
