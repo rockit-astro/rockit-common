@@ -60,6 +60,7 @@ class IP:
     # Windmill Hill Observatory at Warwick University
     WarwickTCS = '172.19.0.160'
     WarwickDome = '172.19.0.161'
+    WarwickHeliostatDome = '172.19.0.166'
 
     # GOTO South (Siding Spring Observatory)
     GOTOSSO = '192.55.98.154'

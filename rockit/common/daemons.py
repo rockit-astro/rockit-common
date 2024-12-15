@@ -197,9 +197,10 @@ warwick_ephemeris = PyroDaemon('warwick_ephemeris_daemon', IP.WarwickTCS, 9012)
 warwick_environment = PyroDaemon('warwick_environment_daemon', IP.WarwickTCS, 9013)
 warwick_operations = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9014)
 warwick_log = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9015)
-
 warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000)
 warwick_rhusb = PyroDaemon('warwick_rhusb_daemon', IP.WarwickDome, 9001)
+warwick_heliostat_dome = PyroDaemon('warwick_heliostat_dome_daemon', IP.WarwickHeliostatDome, 9000)
+warwick_heliostat_shtstick = PyroDaemon('warwick_heliostat_shtstick_daemon', IP.WarwickHeliostatDome, 9001)
 
 goto_south_vaisala = PyroDaemon('goto_south_vaisala_daemon', IP.GOTOSSO, 9022)
 goto_south_cloudwatcher = PyroDaemon('goto_south_cloudwatcher_daemon', IP.GOTOSSO, 9021)
