@@ -217,6 +217,13 @@ ngts_sentinel = PyroDaemon('ngts_sentinel_daemon', IP.NGTSDASNUC, 9008)
 ngts_ephemeris = PyroDaemon('ngts_ephemeris_daemon', IP.NGTSDASNUC, 9009)
 ngts_environment = PyroDaemon('ngts_environment_daemon', IP.NGTSDASNUC, 9010)
 
+pdt_pipeline = PyroDaemon('pdt_pipeline', IP.LocalHost, 9000)
+pdt_cam1 = PyroDaemon('pdt_camera_daemon_cam1', IP.LocalHost, 9001)
+pdt_pipeline_cam1 = PyroDaemon('pdt_pipeline_cam1', IP.LocalHost, 9002)
+pdt_cam2 = PyroDaemon('pdt_camera_daemon_cam2', IP.LocalHost, 9003)
+pdt_pipeline_cam2 = PyroDaemon('pdt_pipeline_cam2', IP.LocalHost, 9004)
+pdt_focuser = PyroDaemon('pdt_focuser_daemon', IP.LocalHost, 9005)
+
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000)
 localhost_test2 = PyroDaemon('localhost_test_daemon2', IP.LocalHost, 9001)
 localhost_test3 = PyroDaemon('localhost_test_daemon3', IP.LocalHost, 9002)
