@@ -224,6 +224,8 @@ pdt_cam2 = PyroDaemon('pdt_camera_daemon_cam2', IP.LocalHost, 9003)
 pdt_pipeline_cam2 = PyroDaemon('pdt_pipeline_cam2', IP.LocalHost, 9004)
 pdt_focuser = PyroDaemon('pdt_focuser_daemon', IP.LocalHost, 9005)
 pdt_operations = PyroDaemon('pdt_operations_daemon', IP.LocalHost, 9006)
+pdt_environment = PyroDaemon('pdt_environment_daemon', IP.LocalHost, 9007)
+pdt_diskspace = PyroDaemon('pdt_diskspace_daemon', IP.LocalHost, 9008)
 
 localhost_test = PyroDaemon('localhost_test_daemon', IP.LocalHost, 9000)
 localhost_test2 = PyroDaemon('localhost_test_daemon2', IP.LocalHost, 9001)
