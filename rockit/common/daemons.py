@@ -25,14 +25,15 @@ from .ip import IP
 
 class PyroDaemon:
     """Encodes a reference to a remote Pyro4 daemon"""
-    def __init__(self, name, host, port, default_timeout=5):
+    def __init__(self, name, host, port, default_timeout=5, default_retries=0):
         self.name = name
         self.host = host
         self.port = port
         self.default_timeout = default_timeout
+        self.default_retries = default_retries
         self.uri = 'PYRO:' + name + '@' + host + ':' + str(port)
 
-    def connect(self, timeout=None):
+    def connect(self, timeout=None, retries=None):
         """Returns a Pyro4 proxy to the remote daemon"""
         proxy = Pyro4.Proxy('PYRO:' + self.name + '@' + self.host + ':' + str(self.port))
 
@@ -41,6 +42,11 @@ class PyroDaemon:
             proxy._pyroTimeout = self.default_timeout
         elif timeout > 0:
             proxy._pyroTimeout = timeout
+
+        if retries is None:
+            proxy._pyroMaxRetries = self.default_retries
+        elif retries > 0:
+            proxy._pyroMaxRetries = retries
         # pylint: enable=protected-access
 
         return proxy
@@ -182,25 +188,25 @@ portable_pipeline_astrometry = PyroDaemon('portable_pipeline_astrometry', IP.Por
 portable_diskspace = PyroDaemon('portable_diskspace_daemon', IP.PortableTCS, 9039)
 portable_environment = PyroDaemon('portable_environment_daemon', IP.PortableTCS, 9010)
 
-warwick_power = PyroDaemon('warwick_power_daemon', IP.WarwickTCS, 9001)
-warwick_telescope = PyroDaemon('warwick_telescope_daemon', IP.WarwickTCS, 9002)
-warwick_camera = PyroDaemon('warwick_camera_daemon', IP.WarwickTCS, 9003)
-warwick_focuser = PyroDaemon('warwick_focuser_daemon', IP.WarwickTCS, 9004)
-warwick_filterwheel = PyroDaemon('warwick_filterwheel_daemon', IP.WarwickTCS, 9005)
-warwick_pipeline = PyroDaemon('warwick_pipeline_daemon', IP.WarwickTCS, 9006)
-warwick_pipeline_cam = PyroDaemon('warwick_pipeline_daemon_cam', IP.WarwickTCS, 9007)
-warwick_diskspace = PyroDaemon('warwick_diskspace_daemon', IP.WarwickTCS, 9008)
-warwick_vaisala = PyroDaemon('warwick_vaisala_daemon', IP.WarwickTCS, 9009)
-warwick_cloudwatcher = PyroDaemon('warwick_cloudwatcher_daemon', IP.WarwickTCS, 9010)
-warwick_rain = PyroDaemon('warwick_rain_daemon', IP.WarwickTCS, 9011)
-warwick_ephemeris = PyroDaemon('warwick_ephemeris_daemon', IP.WarwickTCS, 9012)
-warwick_environment = PyroDaemon('warwick_environment_daemon', IP.WarwickTCS, 9013)
-warwick_operations = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9014)
-warwick_log = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9015)
-warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000)
-warwick_dome_shtstick = PyroDaemon('warwick_dome_shtstick_daemon', IP.WarwickDome, 9001)
-warwick_heliostat_dome = PyroDaemon('warwick_heliostat_dome_daemon', IP.WarwickHeliostatDome, 9000)
-warwick_heliostat_shtstick = PyroDaemon('warwick_heliostat_shtstick_daemon', IP.WarwickHeliostatDome, 9001)
+warwick_power = PyroDaemon('warwick_power_daemon', IP.WarwickTCS, 9001, default_retries=3)
+warwick_telescope = PyroDaemon('warwick_telescope_daemon', IP.WarwickTCS, 9002, default_retries=3)
+warwick_camera = PyroDaemon('warwick_camera_daemon', IP.WarwickTCS, 9003, default_retries=3)
+warwick_focuser = PyroDaemon('warwick_focuser_daemon', IP.WarwickTCS, 9004, default_retries=3)
+warwick_filterwheel = PyroDaemon('warwick_filterwheel_daemon', IP.WarwickTCS, 9005, default_retries=3)
+warwick_pipeline = PyroDaemon('warwick_pipeline_daemon', IP.WarwickTCS, 9006, default_retries=3)
+warwick_pipeline_cam = PyroDaemon('warwick_pipeline_daemon_cam', IP.WarwickTCS, 9007, default_retries=3)
+warwick_diskspace = PyroDaemon('warwick_diskspace_daemon', IP.WarwickTCS, 9008, default_retries=3)
+warwick_vaisala = PyroDaemon('warwick_vaisala_daemon', IP.WarwickTCS, 9009, default_retries=3)
+warwick_cloudwatcher = PyroDaemon('warwick_cloudwatcher_daemon', IP.WarwickTCS, 9010, default_retries=3)
+warwick_rain = PyroDaemon('warwick_rain_daemon', IP.WarwickTCS, 9011, default_retries=3)
+warwick_ephemeris = PyroDaemon('warwick_ephemeris_daemon', IP.WarwickTCS, 9012, default_retries=3)
+warwick_environment = PyroDaemon('warwick_environment_daemon', IP.WarwickTCS, 9013, default_retries=3)
+warwick_operations = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9014, default_retries=3)
+warwick_log = PyroDaemon('warwick_operations_daemon', IP.WarwickTCS, 9015, default_retries=3)
+warwick_dome = PyroDaemon('warwick_dome_daemon', IP.WarwickDome, 9000, default_retries=3)
+warwick_dome_shtstick = PyroDaemon('warwick_dome_shtstick_daemon', IP.WarwickDome, 9001, default_retries=3)
+warwick_heliostat_dome = PyroDaemon('warwick_heliostat_dome_daemon', IP.WarwickHeliostatDome, 9000, default_retries=3)
+warwick_heliostat_shtstick = PyroDaemon('warwick_heliostat_shtstick_daemon', IP.WarwickHeliostatDome, 9001, default_retries=3)
 
 goto_south_vaisala = PyroDaemon('goto_south_vaisala_daemon', IP.GOTOSSO, 9022)
 goto_south_cloudwatcher = PyroDaemon('goto_south_cloudwatcher_daemon', IP.GOTOSSO, 9021)
