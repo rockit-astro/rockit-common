@@ -1,6 +1,6 @@
 Name:           python3-rockit-common
 Version:        %{_version}
-Release:        1
+Release:        1%{dist}
 Summary:        Common backend code for the Robotic Observatory Control Kit
 License:        GPL3
 Url:            https://github.com/rockit-astro/rockit-common

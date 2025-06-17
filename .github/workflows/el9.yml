@@ -1,4 +1,4 @@
-name: RPM Packaging
+name: Packaging (el9)
 
 on:
   push:
@@ -7,8 +7,8 @@ on:
 
 jobs:
   linux:
-    name: RPM Packaging
-    runs-on: ubuntu-22.04
+    name: Packaging (el9)
+    runs-on: ubuntu-latest
     container: rockylinux:9
     steps:
       - name: Install Dependencies
