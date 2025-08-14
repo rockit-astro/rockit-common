@@ -208,6 +208,7 @@ warwick_dome_shtstick = PyroDaemon('warwick_dome_shtstick_daemon', IP.WarwickTCS
 
 warwick_heliostat_dome = PyroDaemon('warwick_heliostat_dome_daemon', IP.WarwickHeliostatDome, 9000)
 warwick_heliostat_shtstick = PyroDaemon('warwick_heliostat_shtstick_daemon', IP.WarwickHeliostatDome, 9001)
+warwick_heliostat_mount = PyroDaemon('warwick_heliostat_mount_daemon', IP.WarwickHeliostatDome, 9002)
 
 goto_south_vaisala = PyroDaemon('goto_south_vaisala_daemon', IP.GOTOSSO, 9022)
 goto_south_cloudwatcher = PyroDaemon('goto_south_cloudwatcher_daemon', IP.GOTOSSO, 9021)
