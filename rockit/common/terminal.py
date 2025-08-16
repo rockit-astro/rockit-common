@@ -20,16 +20,6 @@ Terminal formatting helpers
 
 _console = None
 
-
-class TFmt:
-    Green = '\033[92m'
-    Red = '\033[91m'
-    Cyan = '\033[96m'
-    Yellow = '\033[93m'
-    Bold = '\033[1m'
-    Clear = '\033[0m'
-
-
 def print(*objects, sep=" ", end="\n", file=None, flush=False):
     """
     Replacement for the builtin print function using the rich module

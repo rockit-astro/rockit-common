@@ -39,19 +39,3 @@ def key_for_current_ip(object_ips):
         if client_ip in ip_list:
             return key
     return None
-
-
-def sexagesimal(angle):
-    """Formats a decimal number in sexagesimal format"""
-    negative = angle < 0
-    angle = abs(angle)
-
-    degrees = int(angle)
-    angle = (angle - degrees) * 60
-    minutes = int(angle)
-    seconds = (angle - minutes) * 60
-
-    if negative:
-        degrees *= -1
-
-    return f'{degrees:d}:{minutes:02d}:{seconds:05.2f}'
