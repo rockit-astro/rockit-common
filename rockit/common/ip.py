@@ -37,6 +37,7 @@ class IP:
     CLASPCMOSVM = '10.2.6.185'
     CLASPSWIRVM = '10.2.6.186'
     CLASPDomeAlert = '10.2.6.188'
+    CLASPCompute = '10.2.6.194'
 
     GOTOServer = '10.2.6.100'
     GOTOControl1 = '10.2.6.20'

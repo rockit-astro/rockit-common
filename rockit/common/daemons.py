@@ -174,7 +174,7 @@ clasp_domealert = PyroDaemon('clasp_domealert_daemon', IP.CLASPDomeAlert, 9008)
 clasp_dehumidifier = PyroDaemon('clasp_dehumidifier_daemon', IP.CLASPTCS, 9041)
 clasp_chiller = PyroDaemon('clasp_chiller_daemon', IP.CLASPTCS, 9042)
 
-clasp_swreduce = PyroDaemon('clasp_swreduce', IP.CLASPCMOS, 9050)
+clasp_swreduce = PyroDaemon('clasp_swreduce', IP.CLASPCompute, 9050)
 clasp_camvirt_cmos = PyroDaemon('clasp_camvirt_cmos_daemon', IP.CLASPCMOS, 9040)
 clasp_camvirt_swir = PyroDaemon('clasp_camvirt_swir_daemon', IP.CLASPSWIR, 9040)
 
